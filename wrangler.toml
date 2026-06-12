@@ -1,4 +1,4 @@
-name = "end-it-website-files"
+name = "endit-com-au-website"
 main = ".output/server/index.mjs"
 compatibility_date = "2026-06-12"
 compatibility_flags = ["nodejs_compat"]
