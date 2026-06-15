@@ -1,8 +1,6 @@
 const GENERAL_LINKS = [
   { href: "/apps", label: "Apps" },
   { href: "/support", label: "Support" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
 ];
 
 const PKM_LINKS = [
