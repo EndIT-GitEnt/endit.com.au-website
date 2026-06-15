@@ -9,13 +9,13 @@ export const Route = createFileRoute("/apps/pocket-key-manager/")({
       {
         name: "description",
         content:
-          "Pocket Key Manager is an offline-first mobile app for managing physical keys for properties, workplaces, facilities teams, landlords, and organisations. Coming soon for Android and iOS.",
+          "Pocket Key Manager is an offline-first mobile app for managing physical keys across properties, workplaces, facilities, mining, industrial sites and organisations. Coming soon for Android and iOS.",
       },
       { property: "og:title", content: "Pocket Key Manager — End iT" },
       {
         property: "og:description",
         content:
-          "Offline-first physical key management for properties, workplaces, facilities teams, landlords, and organisations. Coming soon for Android and iOS.",
+          "Offline physical key management for properties, workplaces and organisations. Coming soon for Android and iOS.",
       },
       { property: "og:type", content: "website" },
       {
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/apps/pocket-key-manager/")({
   component: PKMPage,
 });
 
-// ── Data ─────────────────────────────────────────────────────────────────────
+// ── Data ──────────────────────────────────────────────────────────────────────
 
 const BUILT_FOR = [
   {
@@ -67,7 +67,7 @@ const BUILT_FOR = [
     Icon: ShieldIcon,
   },
   {
-    title: "Organisations with shared keys",
+    title: "Organisations managing shared keys",
     description:
       "Any team that needs to track, issue, and recover physical keys in a structured, accountable way.",
     Icon: UsersIcon,
@@ -76,7 +76,7 @@ const BUILT_FOR = [
 
 const FEATURES = [
   {
-    title: "Key copy tracking",
+    title: "Physical key copy tracking",
     description:
       "Track individual physical key copies with unique identifiers, issue status, and full history.",
   },
@@ -101,7 +101,7 @@ const FEATURES = [
       "Record when keys are issued and returned, building a clear operational audit trail.",
   },
   {
-    title: "Key states",
+    title: "Lost, damaged, recovered and retired key states",
     description:
       "Track lost, damaged, recovered, and retired keys through their full lifecycle.",
   },
@@ -111,7 +111,7 @@ const FEATURES = [
       "Maintain a complete local history of all key events, issues, returns, and state changes.",
   },
   {
-    title: "Backup and restore",
+    title: "Backup and restore files",
     description:
       "Export and import your data using user-controlled backup files. No cloud required.",
   },
@@ -145,7 +145,7 @@ const HOW_IT_WORKS = [
   },
   {
     step: "6",
-    label: "Review history",
+    label: "Review audit history",
     desc: "Review the full audit log of all key events at any time.",
   },
 ];
@@ -332,7 +332,7 @@ function UsersIcon() {
   );
 }
 
-// ── Page ─────────────────────────────────────────────────────────────────────
+// ── Page ──────────────────────────────────────────────────────────────────────
 
 function PKMPage() {
   return (
@@ -340,44 +340,37 @@ function PKMPage() {
       <SiteHeader />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden border-b border-[#1a1a1a] px-6 py-20 sm:py-28">
+      <section className="relative overflow-hidden border-b border-[#1a1a1a] px-6 py-24 sm:py-32">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fbbf24] opacity-[0.05] blur-3xl"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fbbf24] opacity-[0.05] blur-3xl"
         />
-        <div className="relative mx-auto max-w-4xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
+        <div className="relative mx-auto max-w-3xl text-center">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
             End iT — App
           </p>
-          <div className="mb-6 flex flex-wrap items-center gap-5">
+          <div className="mb-8 flex justify-center">
             <img
               src="/assets/app/pocket_key_manager/web/icon-192.png"
               alt="Pocket Key Manager icon"
-              className="h-16 w-16 rounded-2xl object-contain sm:h-20 sm:w-20"
+              className="h-20 w-20 rounded-2xl object-contain sm:h-24 sm:w-24"
             />
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
-              Pocket Key Manager
-            </h1>
           </div>
-          <p className="mt-2 max-w-2xl text-xl leading-relaxed text-[#f5f5f5]/70">
-            Offline physical key management for properties, workplaces, and organisations.
+          <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
+            Pocket Key Manager
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-xl leading-relaxed text-[#f5f5f5]/70">
+            Offline physical key management for properties, workplaces and organisations.
           </p>
           <p className="mt-3 text-base text-[#f5f5f5]/45">
             Coming soon for Android and iOS.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Privacy-first", "Offline-first", "No End iT backend"].map((badge) => (
-              <span
-                key={badge}
-                className="rounded-full border border-[#2a2a2a] bg-[#111] px-4 py-1.5 text-xs font-medium text-[#f5f5f5]/50"
-              >
-                {badge}
-              </span>
-            ))}
+          <div className="mx-auto mt-8 max-w-xl rounded border border-[#fbbf24]/20 bg-[#fbbf24]/5 px-6 py-4 text-sm font-medium text-[#fbbf24]/80">
+            Offline-first. No End iT backend. Your operational data stays under your control.
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <button
               disabled
               aria-disabled="true"
@@ -415,7 +408,7 @@ function PKMPage() {
             {BUILT_FOR.map(({ title, description, Icon }) => (
               <div
                 key={title}
-                className="rounded border border-[#1e1e1e] bg-[#111] p-6"
+                className="rounded border border-[#1e1e1e] bg-[#111] p-6 transition-colors hover:border-[#2a2a2a]"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#fbbf24]/10 text-[#fbbf24]">
                   <Icon />
@@ -467,10 +460,13 @@ function PKMPage() {
             <h2 className="text-2xl font-black tracking-tight sm:text-3xl">
               Simple, structured key management
             </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#f5f5f5]/50">
+              Create keys → assign access → book keys → issue keys → return keys → review audit history
+            </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {HOW_IT_WORKS.map(({ step, label, desc }) => (
-              <div key={step} className="flex gap-4">
+              <div key={step} className="flex gap-4 rounded border border-[#1e1e1e] bg-[#0f0f0f] p-5">
                 <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#fbbf24]/30 bg-[#fbbf24]/5 text-sm font-black text-[#fbbf24]">
                   {step}
                 </div>
@@ -487,25 +483,37 @@ function PKMPage() {
       {/* ── Privacy / Offline-first ── */}
       <section className="border-b border-[#1a1a1a] bg-[#0d0d0d] px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
                 Privacy-first
               </p>
               <h2 className="text-2xl font-black tracking-tight sm:text-3xl">
-                Offline-first. No End iT backend. Your data, your control.
+                Offline-first. No End iT backend. Your operational data stays under your control.
               </h2>
-              <p className="mt-5 text-base leading-relaxed text-[#f5f5f5]/70">
-                End iT does not operate a backend server for Pocket Key Manager. End iT
-                does not collect, receive, access, sell, analyse, track, or transmit your
-                operational app data. Your data stays on your device and under your
-                control.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/50">
-                Backups, imports, and exports are user-controlled files. Support users
-                should not send backup files or sensitive operational data unless
-                specifically requested and authorised.
-              </p>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#f5f5f5]/70">
+                <p>
+                  End iT does not operate a backend server for Pocket Key Manager.
+                </p>
+                <p>
+                  Operational app data is stored locally on the user's device.
+                </p>
+                <p>
+                  End iT does not collect, receive, access, sell, analyse, track, or transmit
+                  operational app data.
+                </p>
+                <p>
+                  Backups are user-controlled export files.
+                </p>
+              </div>
+              <div className="mt-8">
+                <a
+                  href="/apps/pocket-key-manager/privacy"
+                  className="inline-flex items-center gap-2 rounded border border-[#2a2a2a] px-5 py-2.5 text-sm font-semibold text-[#f5f5f5]/60 transition-colors hover:border-[#fbbf24]/40 hover:text-[#fbbf24]"
+                >
+                  Read the full Privacy Policy →
+                </a>
+              </div>
             </div>
             <ul className="space-y-3">
               {PRIVACY_POINTS.map((item) => (
@@ -535,8 +543,8 @@ function PKMPage() {
               Coming soon on Android and iOS
             </h2>
             <p className="mt-3 max-w-xl text-base leading-relaxed text-[#f5f5f5]/55">
-              Pocket Key Manager is currently being prepared for release. It will be
-              available on Google Play and the App Store.
+              Pocket Key Manager is currently being prepared for release on Google Play
+              and the App Store.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
