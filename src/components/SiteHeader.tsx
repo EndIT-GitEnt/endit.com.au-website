@@ -1,9 +1,9 @@
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/#pocket-key-manager", label: "Pocket Key Manager" },
+  { href: "/apps", label: "Apps" },
+  { href: "/support", label: "Support" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
-  { href: "/support", label: "Support" },
 ];
 
 export function SiteHeader() {

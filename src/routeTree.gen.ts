@@ -13,6 +13,11 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppsIndexRouteImport } from './routes/apps/index'
+import { Route as AppsPocketKeyManagerIndexRouteImport } from './routes/apps/pocket-key-manager/index'
+import { Route as AppsPocketKeyManagerTermsRouteImport } from './routes/apps/pocket-key-manager/terms'
+import { Route as AppsPocketKeyManagerSupportRouteImport } from './routes/apps/pocket-key-manager/support'
+import { Route as AppsPocketKeyManagerPrivacyRouteImport } from './routes/apps/pocket-key-manager/privacy'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -34,18 +39,57 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppsIndexRoute = AppsIndexRouteImport.update({
+  id: '/apps/',
+  path: '/apps/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppsPocketKeyManagerIndexRoute =
+  AppsPocketKeyManagerIndexRouteImport.update({
+    id: '/apps/pocket-key-manager/',
+    path: '/apps/pocket-key-manager/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AppsPocketKeyManagerTermsRoute =
+  AppsPocketKeyManagerTermsRouteImport.update({
+    id: '/apps/pocket-key-manager/terms',
+    path: '/apps/pocket-key-manager/terms',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AppsPocketKeyManagerSupportRoute =
+  AppsPocketKeyManagerSupportRouteImport.update({
+    id: '/apps/pocket-key-manager/support',
+    path: '/apps/pocket-key-manager/support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AppsPocketKeyManagerPrivacyRoute =
+  AppsPocketKeyManagerPrivacyRouteImport.update({
+    id: '/apps/pocket-key-manager/privacy',
+    path: '/apps/pocket-key-manager/privacy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
+  '/apps/': typeof AppsIndexRoute
+  '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
+  '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
+  '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
+  '/apps/pocket-key-manager/': typeof AppsPocketKeyManagerIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
+  '/apps': typeof AppsIndexRoute
+  '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
+  '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
+  '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
+  '/apps/pocket-key-manager': typeof AppsPocketKeyManagerIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +97,46 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
+  '/apps/': typeof AppsIndexRoute
+  '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
+  '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
+  '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
+  '/apps/pocket-key-manager/': typeof AppsPocketKeyManagerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy' | '/support' | '/terms'
+  fullPaths:
+    | '/'
+    | '/privacy'
+    | '/support'
+    | '/terms'
+    | '/apps/'
+    | '/apps/pocket-key-manager/privacy'
+    | '/apps/pocket-key-manager/support'
+    | '/apps/pocket-key-manager/terms'
+    | '/apps/pocket-key-manager/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy' | '/support' | '/terms'
-  id: '__root__' | '/' | '/privacy' | '/support' | '/terms'
+  to:
+    | '/'
+    | '/privacy'
+    | '/support'
+    | '/terms'
+    | '/apps'
+    | '/apps/pocket-key-manager/privacy'
+    | '/apps/pocket-key-manager/support'
+    | '/apps/pocket-key-manager/terms'
+    | '/apps/pocket-key-manager'
+  id:
+    | '__root__'
+    | '/'
+    | '/privacy'
+    | '/support'
+    | '/terms'
+    | '/apps/'
+    | '/apps/pocket-key-manager/privacy'
+    | '/apps/pocket-key-manager/support'
+    | '/apps/pocket-key-manager/terms'
+    | '/apps/pocket-key-manager/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +144,11 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   SupportRoute: typeof SupportRoute
   TermsRoute: typeof TermsRoute
+  AppsIndexRoute: typeof AppsIndexRoute
+  AppsPocketKeyManagerPrivacyRoute: typeof AppsPocketKeyManagerPrivacyRoute
+  AppsPocketKeyManagerSupportRoute: typeof AppsPocketKeyManagerSupportRoute
+  AppsPocketKeyManagerTermsRoute: typeof AppsPocketKeyManagerTermsRoute
+  AppsPocketKeyManagerIndexRoute: typeof AppsPocketKeyManagerIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +181,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/apps/': {
+      id: '/apps/'
+      path: '/apps'
+      fullPath: '/apps/'
+      preLoaderRoute: typeof AppsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apps/pocket-key-manager/': {
+      id: '/apps/pocket-key-manager/'
+      path: '/apps/pocket-key-manager'
+      fullPath: '/apps/pocket-key-manager/'
+      preLoaderRoute: typeof AppsPocketKeyManagerIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apps/pocket-key-manager/terms': {
+      id: '/apps/pocket-key-manager/terms'
+      path: '/apps/pocket-key-manager/terms'
+      fullPath: '/apps/pocket-key-manager/terms'
+      preLoaderRoute: typeof AppsPocketKeyManagerTermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apps/pocket-key-manager/support': {
+      id: '/apps/pocket-key-manager/support'
+      path: '/apps/pocket-key-manager/support'
+      fullPath: '/apps/pocket-key-manager/support'
+      preLoaderRoute: typeof AppsPocketKeyManagerSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apps/pocket-key-manager/privacy': {
+      id: '/apps/pocket-key-manager/privacy'
+      path: '/apps/pocket-key-manager/privacy'
+      fullPath: '/apps/pocket-key-manager/privacy'
+      preLoaderRoute: typeof AppsPocketKeyManagerPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +224,11 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   SupportRoute: SupportRoute,
   TermsRoute: TermsRoute,
+  AppsIndexRoute: AppsIndexRoute,
+  AppsPocketKeyManagerPrivacyRoute: AppsPocketKeyManagerPrivacyRoute,
+  AppsPocketKeyManagerSupportRoute: AppsPocketKeyManagerSupportRoute,
+  AppsPocketKeyManagerTermsRoute: AppsPocketKeyManagerTermsRoute,
+  AppsPocketKeyManagerIndexRoute: AppsPocketKeyManagerIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
