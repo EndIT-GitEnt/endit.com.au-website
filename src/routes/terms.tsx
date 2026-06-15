@@ -34,6 +34,30 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
+const emailLink = (
+  <a href="mailto:support@endit.com.au" className="text-[#fbbf24] underline underline-offset-4">
+    support@endit.com.au
+  </a>
+);
+
+const termsLink = (
+  <a
+    href="https://endit.com.au/terms"
+    className="text-[#fbbf24] underline underline-offset-4"
+  >
+    https://endit.com.au/terms
+  </a>
+);
+
+const privacyLink = (
+  <a
+    href="https://endit.com.au/privacy"
+    className="text-[#fbbf24] underline underline-offset-4"
+  >
+    https://endit.com.au/privacy
+  </a>
+);
+
 function TermsPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5]">
@@ -45,338 +69,529 @@ function TermsPage() {
           </p>
           <h1 className="text-4xl font-black tracking-tight">Terms of Use</h1>
           <div className="mt-4 space-y-0.5 text-sm text-[#f5f5f5]/45">
-            <p>Applies to: Pocket Key Manager</p>
-            <p>Publisher: End iT (ABN: 62 445 871 758)</p>
-            <p>Website: https://endit.com.au</p>
+            <p>Pocket Key Manager</p>
+            <p>Publisher: End iT</p>
+            <p>ABN: 62 445 871 758</p>
+            <p>
+              Website:{" "}
+              <a href="https://endit.com.au" className="text-[#fbbf24]/70 underline underline-offset-4">
+                https://endit.com.au
+              </a>
+            </p>
+            <p>
+              Terms URL:{" "}
+              <a href="https://endit.com.au/terms" className="text-[#fbbf24]/70 underline underline-offset-4">
+                https://endit.com.au/terms
+              </a>
+            </p>
+            <p>Support: {emailLink}</p>
+            <p>Postal address: PO Box 1188, South Perth WA 6151, Australia</p>
             <p>Last updated: 15 June 2026</p>
           </div>
         </div>
 
         <div className="space-y-10">
-          <Section title="1. About These Terms">
+          <Section title="1. Introduction">
             <p>
-              These Terms of Use ("Terms") govern your use of the Pocket Key Manager mobile
-              application ("the app") published by End iT (ABN: 62 445 871 758) ("End iT", "we",
-              "our", or "us").
+              These Terms of Use apply to the Pocket Key Manager mobile app published by End iT.
             </p>
             <p>
-              By downloading, installing, or using the app, you agree to these Terms. If you do
-              not agree, do not use the app.
+              By downloading, installing, accessing, or using Pocket Key Manager, you agree to
+              these Terms.
             </p>
+            <p>
+              If you are using the app on behalf of an organisation, you confirm that you are
+              authorised to use the app for that organisation.
+            </p>
+            <p>If you do not agree to these Terms, do not use the app.</p>
           </Section>
 
-          <Section title="2. Who We Are">
-            <p>End iT is an Australian business (ABN: 62 445 871 758).</p>
+          <Section title="2. About Pocket Key Manager">
             <p>
-              Contact:{" "}
-              <a
-                href="mailto:support@endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                support@endit.com.au
-              </a>
-              <br />
-              PO Box 1188, South Perth WA 6151, Australia
-              <br />
-              Website:{" "}
-              <a
-                href="https://endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                https://endit.com.au
-              </a>
+              Pocket Key Manager is an offline-first mobile app for managing records relating to
+              physical keys in mining, industrial, workplace, and organisational environments.
             </p>
-          </Section>
-
-          <Section title="3. What the App Does">
-            <p>
-              Pocket Key Manager is a record-keeping and workflow tool designed for managing
-              physical keys in mining and industrial organisations. It helps organisations record:
-            </p>
+            <p>The app may be used to record and manage:</p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>Physical key copy records and their current status</li>
-              <li>Lock access relationships</li>
-              <li>Key holder information</li>
-              <li>Bookings for key access</li>
-              <li>Key issue and return events</li>
-              <li>Key states (active, damaged, lost, recovered, repaired, retired)</li>
-              <li>Audit logs</li>
-              <li>Backup and restore files</li>
+              <li>physical key copies;</li>
+              <li>key profiles and access patterns;</li>
+              <li>locks and lock access;</li>
+              <li>people and key holders;</li>
+              <li>bookings;</li>
+              <li>key issue and return workflows;</li>
+              <li>damaged, lost, recovered, repaired, and retired key states;</li>
+              <li>audit logs;</li>
+              <li>backup and restore files.</li>
             </ul>
-          </Section>
-
-          <Section title="4. What the App Does Not Do">
+            <p>The app is a record-keeping and workflow tool.</p>
             <p>
-              The app is a software record-keeping tool only. It does not:
-            </p>
-            <ul className="ml-4 list-disc space-y-1">
-              <li>Physically secure, lock, or unlock anything</li>
-              <li>
-                Replace organisational key-control policies, procedures, or physical security
-                measures
-              </li>
-              <li>Guarantee the accuracy or completeness of the records you enter</li>
-              <li>
-                Provide legal, security, safety, or compliance advice of any kind
-              </li>
-            </ul>
-            <p>
-              Your organisation is responsible for establishing and maintaining appropriate
-              key-control policies. The app is a tool to assist in recording and managing those
-              operations — it does not replace human oversight, physical security controls, or
-              organisational governance.
+              It does not physically secure keys, prevent unauthorised physical access, replace
+              locks, replace access-control hardware, replace workplace supervision, or guarantee
+              compliance with workplace security procedures.
             </p>
           </Section>
 
-          <Section title="5. No End iT Backend">
+          <Section title="3. Business and organisational use">
             <p>
-              End iT does not operate a backend server, cloud database, or cloud account system
-              for Pocket Key Manager. All app data is stored locally on your device.
+              Pocket Key Manager is intended for business, workplace, industrial, mining, and
+              organisational use.
             </p>
-            <p>This means:</p>
+            <p>
+              You and your organisation are responsible for deciding whether the app is suitable
+              for your operational, legal, security, privacy, workplace, safety, audit, and
+              record-keeping requirements.
+            </p>
+            <p>
+              You are responsible for ensuring that only authorised users access the app and that
+              the app is used in accordance with your organisation's policies.
+            </p>
+          </Section>
+
+          <Section title="4. Local-only app model">
+            <p>
+              Pocket Key Manager is designed to operate offline and locally on the device.
+            </p>
+            <p>End iT does not operate a backend server for the app.</p>
+            <p>End iT does not:</p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>End iT cannot access, view, modify, or recover your app data</li>
-              <li>
-                End iT cannot remotely reset your app, your PIN, or any access controls
-              </li>
-              <li>
-                If you lose access to your device or forget your PIN, End iT cannot recover your
-                data
-              </li>
-              <li>
-                If you delete the app or lose your device without a backup, your data is
-                permanently lost
-              </li>
+              <li>host your app database;</li>
+              <li>cloud sync your data;</li>
+              <li>provide user accounts;</li>
+              <li>remotely administer your records;</li>
+              <li>remotely access your operational data;</li>
+              <li>remotely recover deleted records;</li>
+              <li>remotely delete local records;</li>
+              <li>provide server-side data processing.</li>
             </ul>
             <p>
-              You are responsible for maintaining backups of your app data using the app's
-              built-in backup and restore feature.
+              Because the app data is local, End iT cannot recover lost local data, restore
+              deleted records, access your app database, reset your local operational records, or
+              remotely remove information from your device.
             </p>
           </Section>
 
-          <Section title="6. Your Responsibilities">
+          <Section title="5. Your data and responsibility">
+            <p>
+              You or your organisation own and control the operational data entered into Pocket Key
+              Manager.
+            </p>
+            <p>You are responsible for:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>the accuracy of records entered into the app;</li>
+              <li>deciding what information may be recorded;</li>
+              <li>ensuring users are authorised to enter or view information;</li>
+              <li>
+                complying with workplace, privacy, employment, safety, security, and industry
+                obligations;
+              </li>
+              <li>securing devices where the app is installed;</li>
+              <li>managing backup files safely;</li>
+              <li>reviewing audit logs and key-control records as required;</li>
+              <li>training staff or users who rely on the app;</li>
+              <li>deciding whether the app is appropriate for your workplace processes.</li>
+            </ul>
+            <p>
+              End iT is not responsible for incorrect, incomplete, outdated, unauthorised, or
+              unlawful data entered by users or organisations.
+            </p>
+          </Section>
+
+          <Section title="6. PIN and biometric unlock">
+            <p>
+              Pocket Key Manager may include local access protection features such as PIN unlock
+              and biometric unlock.
+            </p>
+            <p>
+              These features are intended to reduce casual or unauthorised local access to the app.
+            </p>
+            <p>They do not replace:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>physical key-control procedures;</li>
+              <li>device management policies;</li>
+              <li>staff authorisation checks;</li>
+              <li>workplace security policies;</li>
+              <li>access reviews;</li>
+              <li>incident reporting;</li>
+              <li>audit procedures;</li>
+              <li>safety procedures;</li>
+              <li>legal or compliance obligations.</li>
+            </ul>
+            <p>
+              Your organisation should continue to maintain appropriate operational controls
+              outside the app.
+            </p>
+          </Section>
+
+          <Section title="7. Backups, exports, imports, and restores">
+            <p>
+              Pocket Key Manager may allow users to export, import, share, or restore backup files.
+            </p>
+            <p>
+              Backup files may contain sensitive operational data, including information about:
+            </p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>keys;</li>
+              <li>locks;</li>
+              <li>lock access;</li>
+              <li>key holders;</li>
+              <li>bookings;</li>
+              <li>audit logs;</li>
+              <li>issue history;</li>
+              <li>return history;</li>
+              <li>damaged keys;</li>
+              <li>lost keys;</li>
+              <li>recovered keys;</li>
+              <li>repaired keys;</li>
+              <li>retired keys.</li>
+            </ul>
             <p>You and your organisation are responsible for:</p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>Ensuring that information entered into the app is accurate and current</li>
+              <li>deciding when backups are created;</li>
+              <li>deciding where backups are stored;</li>
+              <li>protecting backup files from unauthorised access;</li>
               <li>
-                Maintaining the security of your device and preventing unauthorised access to
-                the app
+                checking whether a backup file is appropriate before importing or restoring it;
               </li>
               <li>
-                Creating regular backups of your app data and storing those backups securely
+                ensuring backup files are not emailed, uploaded, copied, or shared in breach of
+                organisational policy;
               </li>
+              <li>securely deleting backup files when they are no longer needed;</li>
               <li>
-                Controlling who within your organisation has access to devices running the app
+                keeping backup files available if you need to restore app data later.
               </li>
+            </ul>
+            <p>
+              End iT is not responsible for backup files that you export, share, store, email,
+              upload, lose, corrupt, overwrite, delete, import, or restore.
+            </p>
+          </Section>
+
+          <Section title="8. No automatic End iT cloud sync or account recovery">
+            <p>
+              Pocket Key Manager does not provide automatic End iT cloud sync or End iT account
+              recovery.
+            </p>
+            <p>
+              If a device is lost, damaged, wiped, replaced, inaccessible, or stolen, app data
+              may be lost unless you have created and safely stored a usable backup.
+            </p>
+            <p>
+              You should test your backup and restore procedures before relying on the app in an
+              operational setting.
+            </p>
+          </Section>
+
+          <Section title="9. Operational decisions remain your responsibility">
+            <p>
+              Pocket Key Manager may help record key-related events, but all operational decisions
+              remain the responsibility of the user and organisation.
+            </p>
+            <p>This includes decisions about:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>issuing keys;</li>
+              <li>returning keys;</li>
+              <li>approving bookings;</li>
+              <li>marking keys as lost;</li>
+              <li>marking keys as damaged;</li>
+              <li>repairing keys;</li>
+              <li>recovering keys;</li>
+              <li>retiring keys;</li>
+              <li>changing locks;</li>
+              <li>investigating incidents;</li>
+              <li>reporting security events;</li>
+              <li>granting access;</li>
+              <li>revoking access;</li>
+              <li>reviewing key-control history.</li>
+            </ul>
+            <p>
+              The app should support your key-control process. It should not be the only control
+              your organisation relies on.
+            </p>
+          </Section>
+
+          <Section title="10. Acceptable use">
+            <p>You must not use Pocket Key Manager to:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>break the law;</li>
+              <li>record information you are not authorised to record;</li>
+              <li>access information you are not authorised to access;</li>
               <li>
-                Making operational decisions based on information in the app — the app records
-                what you enter and does not independently verify physical key locations or access
+                misrepresent key custody, issue, return, loss, damage, repair, recovery, or
+                retirement records;
               </li>
+              <li>bypass workplace security procedures;</li>
+              <li>tamper with audit logs or operational records;</li>
+              <li>use the app to conceal security incidents;</li>
               <li>
-                Complying with applicable privacy laws in respect of personal information of key
-                holders and other individuals stored in the app
+                reverse engineer, copy, resell, or redistribute the app except where legally
+                permitted;
               </li>
+              <li>interfere with the app's security or normal operation;</li>
+              <li>use the app in a way that could harm End iT, other users, or third parties.</li>
             </ul>
           </Section>
 
-          <Section title="7. PIN and Biometric Unlock">
+          <Section title="11. No professional advice">
             <p>
-              The app includes optional PIN and biometric unlock features to help protect local
-              app access. These features:
+              Pocket Key Manager does not provide legal, security, compliance, mining safety,
+              workplace safety, employment, audit, insurance, or risk-management advice.
+            </p>
+            <p>
+              You should obtain appropriate professional advice before relying on the app as part
+              of a formal compliance, safety, security, audit, or legal framework.
+            </p>
+          </Section>
+
+          <Section title="12. App updates and changes">
+            <p>
+              End iT may update, improve, modify, suspend, or discontinue parts of the app from
+              time to time.
+            </p>
+            <p>
+              Updates may include bug fixes, security improvements, workflow changes, compatibility
+              changes, database changes, user interface changes, or feature changes.
+            </p>
+            <p>
+              You are responsible for deciding whether and when to install updates, subject to
+              your app store, device, and organisational policies.
+            </p>
+            <p>
+              Some updates may be required for compatibility, security, or app store availability.
+            </p>
+          </Section>
+
+          <Section title="13. Third-party platforms and services">
+            <p>
+              Pocket Key Manager may rely on mobile operating system features and app store
+              services, including Android, iOS, file picker, sharing, secure storage, and biometric
+              systems.
+            </p>
+            <p>
+              Your use of those platforms and services may also be subject to the terms and privacy
+              policies of Apple, Google, device manufacturers, cloud providers, email providers,
+              file-sharing services, and other third parties.
+            </p>
+            <p>
+              End iT is not responsible for third-party platforms, devices, operating systems, app
+              stores, cloud drives, email services, sharing destinations, storage providers, or
+              file managers selected by the user.
+            </p>
+          </Section>
+
+          <Section title="14. Apple App Store terms">
+            <p>
+              If you downloaded Pocket Key Manager from the Apple App Store, Apple's terms and
+              conditions may also apply.
+            </p>
+            <p>These Terms are between you and End iT, not Apple.</p>
+            <p>
+              End iT, not Apple, is responsible for the app and its content, except where Apple's
+              own terms or applicable law say otherwise.
+            </p>
+            <p>Apple has no obligation to provide maintenance or support for the app.</p>
+            <p>
+              If the app fails to meet an applicable warranty, you may notify Apple, and Apple may
+              refund the purchase price if required under its terms. To the maximum extent
+              permitted by law, Apple has no other warranty obligation for the app.
+            </p>
+            <p>
+              Apple is not responsible for claims relating to the app or your use of the app,
+              including product liability claims, legal compliance claims, consumer protection
+              claims, or intellectual property claims, except where required by law.
+            </p>
+            <p>
+              Apple and its subsidiaries are third-party beneficiaries of this section and may
+              enforce it against you where applicable.
+            </p>
+          </Section>
+
+          <Section title="15. Google Play terms">
+            <p>
+              If you downloaded Pocket Key Manager from Google Play, Google Play's terms and
+              policies may also apply.
+            </p>
+            <p>These Terms are between you and End iT, not Google.</p>
+            <p>
+              Google is not responsible for providing maintenance, support, refunds, or warranty
+              services for the app except as required by Google Play's own terms or applicable law.
+            </p>
+          </Section>
+
+          <Section title="16. Intellectual property">
+            <p>
+              Pocket Key Manager, including its software, design, branding, text, workflows, and
+              other app materials, is owned by End iT or its licensors.
+            </p>
+            <p>
+              Subject to these Terms, End iT grants you a limited, non-exclusive, non-transferable
+              licence to use the app for your own or your organisation's internal purposes.
+            </p>
+            <p>You do not acquire ownership of the app or End iT's intellectual property.</p>
+          </Section>
+
+          <Section title="17. Feedback">
+            <p>
+              If you provide feedback, ideas, bug reports, or suggestions to End iT, you allow End
+              iT to use them to improve the app without obligation to compensate you.
+            </p>
+            <p>
+              You should not include confidential operational data, sensitive backup files,
+              personal information, or workplace records in feedback unless you are authorised to
+              do so.
+            </p>
+          </Section>
+
+          <Section title="18. Fees and purchases">
+            <p>
+              Pocket Key Manager may be offered as a free app, paid app, subscription, or licensed
+              product.
+            </p>
+            <p>
+              If the app is offered through the Apple App Store or Google Play, payments, refunds,
+              renewals, cancellations, and billing issues may be handled by the relevant app store
+              under its own terms.
+            </p>
+            <p>End iT may introduce, remove, or change paid features in the future.</p>
+            <p>Any paid terms will be presented before purchase where required.</p>
+          </Section>
+
+          <Section title="19. Privacy">
+            <p>
+              Your use of Pocket Key Manager is also covered by the Privacy Policy at:{" "}
+              {privacyLink}
+            </p>
+            <p>The app is designed to store operational data locally on the device.</p>
+            <p>
+              End iT does not collect, receive, access, sell, analyse, track, or transmit the
+              operational data entered into the app unless you choose to send information to End
+              iT, such as through a support request.
+            </p>
+          </Section>
+
+          <Section title="20. Disclaimer">
+            <p>
+              Pocket Key Manager is provided on an "as is" and "as available" basis.
+            </p>
+            <p>
+              End iT aims to provide a useful and reliable app, but End iT does not guarantee that
+              the app will be error-free, uninterrupted, secure against all threats, compatible
+              with every device, suitable for every organisation, or compliant with every legal,
+              safety, operational, audit, or security requirement.
+            </p>
+            <p>
+              You are responsible for testing the app and deciding whether it is appropriate for
+              your use case before relying on it operationally.
+            </p>
+          </Section>
+
+          <Section title="21. Australian consumer rights">
+            <p>
+              Nothing in these Terms excludes, restricts, or modifies any consumer guarantee,
+              right, remedy, or protection that cannot be excluded, restricted, or modified under
+              Australian Consumer Law or other applicable law.
+            </p>
+            <p>
+              Where End iT is allowed to limit liability, End iT's liability is limited to the
+              maximum extent permitted by law.
+            </p>
+          </Section>
+
+          <Section title="22. Limitation of liability">
+            <p>
+              To the maximum extent permitted by law, End iT is not liable for loss, damage, cost,
+              or expense arising from:
             </p>
             <ul className="ml-4 list-disc space-y-1">
+              <li>incorrect data entered into the app;</li>
+              <li>incomplete or outdated records;</li>
+              <li>unauthorised access to a device;</li>
+              <li>lost, deleted, corrupted, overwritten, or inaccessible local data;</li>
+              <li>lost, exposed, corrupted, or unauthorised backup files;</li>
+              <li>operational decisions made using app records;</li>
+              <li>failure to follow organisational key-control procedures;</li>
+              <li>failure to follow workplace safety or security procedures;</li>
+              <li>device failure;</li>
+              <li>operating system issues;</li>
+              <li>app store issues;</li>
               <li>
-                Help prevent casual or unauthorised access to the app on a shared or unattended
-                device
+                third-party file sharing, email, storage, messaging, or cloud services;
               </li>
+              <li>use of the app in breach of these Terms;</li>
               <li>
-                Do not replace device-level security measures (such as screen lock and device
-                encryption)
-              </li>
-              <li>
-                Do not replace your organisation's physical key-control policies and procedures
+                use of the app in a way that is not suitable for the organisation's requirements.
               </li>
             </ul>
             <p>
-              If you use biometric unlock, it operates through your device's operating system
-              biometric system. The app does not store biometric templates or biometric data.
+              Nothing in these Terms excludes liability that cannot be excluded under applicable
+              law.
             </p>
           </Section>
 
-          <Section title="8. Backup and Export Files">
-            <p>The app provides a backup and export feature. You should be aware:</p>
-            <ul className="ml-4 list-disc space-y-1">
-              <li>
-                Backup files may contain sensitive operational information including key holder
-                names, key records, lock records, audit logs, and other records
-              </li>
-              <li>
-                You are responsible for the security of backup files — including where you store
-                them, who can access them, and how they are disposed of
-              </li>
-              <li>End iT does not receive, store, or have access to your backup files</li>
-              <li>
-                Backup files are not automatically uploaded to any cloud service by the app
-              </li>
-            </ul>
-          </Section>
-
-          <Section title="9. No Automatic Cloud Sync">
+          <Section title="23. Indemnity">
             <p>
-              The app does not automatically sync data to any cloud service, End iT server, or
-              third-party service. All data remains local to your device unless you explicitly
-              export it using the backup and export feature.
+              If you use Pocket Key Manager on behalf of an organisation, your organisation is
+              responsible for its use of the app, the data entered into it, and the way users
+              manage devices and backup files.
             </p>
-          </Section>
-
-          <Section title="10. Acceptable Use">
             <p>
-              You may use the app only for lawful purposes and in accordance with these Terms.
-              You must not:
+              To the extent permitted by law, you agree to protect End iT from claims, losses,
+              liabilities, costs, and expenses arising from:
             </p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>Use the app for any unlawful purpose or in violation of applicable laws</li>
-              <li>
-                Use the app to record inaccurate, fraudulent, or misleading information
-              </li>
-              <li>Attempt to reverse-engineer, decompile, or modify the app</li>
-              <li>
-                Use the app in a way that violates any applicable privacy laws in respect of the
-                personal information of key holders or other individuals recorded in the app
-              </li>
+              <li>your unlawful use of the app;</li>
+              <li>unauthorised data entry;</li>
+              <li>misuse of backup files;</li>
+              <li>breach of these Terms;</li>
+              <li>breach of workplace policies;</li>
+              <li>breach of third-party rights;</li>
+              <li>operational decisions made using app records.</li>
             </ul>
           </Section>
 
-          <Section title="11. No Professional Advice">
+          <Section title="24. Termination">
+            <p>You may stop using Pocket Key Manager at any time.</p>
             <p>
-              The app is a software tool and does not provide legal, security, safety, workplace
-              health and safety, compliance, or professional advice of any kind. You should
-              consult appropriately qualified professionals for advice in those areas.
+              End iT may suspend or stop providing the app if necessary, including for legal,
+              security, operational, business, or app store reasons.
+            </p>
+            <p>Uninstalling the app may delete local app data from the device.</p>
+            <p>
+              You should export any required backup before uninstalling, subject to your
+              organisation's policies.
             </p>
           </Section>
 
-          <Section title="12. App Updates">
+          <Section title="25. Governing law">
             <p>
-              End iT may release updates to the app from time to time. Updates may add, change,
-              or remove features. We recommend keeping the app updated to receive bug fixes and
-              improvements. Continued use of the app after an update constitutes acceptance of
-              any changes to the app's functionality.
+              These Terms are governed by the laws of Western Australia, Australia.
+            </p>
+            <p>
+              Any disputes will be handled by the courts and tribunals of Western Australia,
+              Australia, unless applicable law requires otherwise.
             </p>
           </Section>
 
-          <Section title="13. Third-Party Platforms">
+          <Section title="26. Changes to these Terms">
+            <p>End iT may update these Terms from time to time.</p>
+            <p>The updated version will be published at: {termsLink}</p>
             <p>
-              The app is distributed through third-party platforms including the Apple App Store
-              and Google Play. Your use of those platforms is subject to the terms and conditions
-              of Apple Inc. and Google LLC respectively. End iT is not responsible for the
-              practices of Apple, Google, or any device manufacturer.
-            </p>
-            <p>
-              The app may use operating system features including the device file picker, file
-              sharing functionality, and biometric authentication system. These features are
-              provided by the device operating system and are subject to the privacy practices of
-              the operating system provider and device manufacturer.
+              Continued use of the app after updated Terms are published means the updated Terms
+              apply from the date stated in the Terms.
             </p>
           </Section>
 
-          <Section title="14. Intellectual Property">
-            <p>
-              The app, including its design, code, functionality, and all associated intellectual
-              property, is owned by End iT. You are granted a limited, non-exclusive,
-              non-transferable licence to use the app for your internal operational purposes in
-              accordance with these Terms. Nothing in these Terms transfers any ownership of
-              intellectual property to you.
-            </p>
-          </Section>
-
-          <Section title="15. Fees and In-App Purchases">
-            <p>
-              The app may be offered as a free download or may include paid features,
-              subscriptions, or in-app purchases. Where fees apply, details will be presented to
-              you clearly at the time of purchase through the applicable app store. All purchases
-              are subject to the payment terms of the app store through which the app is
-              downloaded.
-            </p>
-            <p>
-              End iT reserves the right to introduce, modify, or remove paid features at any
-              time, subject to applicable law and the terms of the applicable app store.
-            </p>
-          </Section>
-
-          <Section title="16. Australian Consumer Law">
-            <p>
-              Nothing in these Terms limits any rights you may have under the Australian Consumer
-              Law (Schedule 2 of the Competition and Consumer Act 2010 (Cth)) or other applicable
-              law that cannot be excluded, restricted, or modified by agreement.
-            </p>
-            <p>
-              To the extent permitted by law, End iT's liability for failure to comply with a
-              consumer guarantee (other than a guarantee as to title) is limited to, at End iT's
-              option, re-supplying the relevant services or paying the cost of re-supply.
-            </p>
-          </Section>
-
-          <Section title="17. Limitation of Liability">
-            <p>
-              To the maximum extent permitted by applicable law, End iT is not liable for:
-            </p>
-            <ul className="ml-4 list-disc space-y-1">
-              <li>
-                Any loss, corruption, or inaccessibility of app data stored on your device
-              </li>
-              <li>Any loss arising from failure to maintain adequate backups</li>
-              <li>Any loss arising from device loss, theft, or damage</li>
-              <li>
-                Any operational decisions made in reliance on information recorded in the app
-              </li>
-              <li>
-                Any indirect, incidental, special, consequential, or punitive damages arising
-                from your use of the app
-              </li>
-            </ul>
-            <p>
-              This limitation does not apply to the extent excluded by applicable law, including
-              the Australian Consumer Law.
-            </p>
-          </Section>
-
-          <Section title="18. Governing Law">
-            <p>
-              These Terms are governed by the laws of Western Australia, Australia. You agree to
-              submit to the non-exclusive jurisdiction of the courts of Western Australia for any
-              disputes arising from these Terms or your use of the app.
-            </p>
-          </Section>
-
-          <Section title="19. Changes to These Terms">
-            <p>
-              We may update these Terms from time to time. The current version will be published
-              at{" "}
-              <a
-                href="https://endit.com.au/terms"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                https://endit.com.au/terms
-              </a>{" "}
-              with the last updated date shown above. Continued use of the app after changes are
-              published constitutes acceptance of the updated Terms.
-            </p>
-          </Section>
-
-          <Section title="20. Contact Us">
-            <p>For questions about these Terms, please contact:</p>
+          <Section title="27. Contact">
+            <p>For support or questions about these Terms, contact:</p>
             <div className="mt-2 rounded border border-[#1e1e1e] bg-[#111] p-4">
               <p className="font-semibold text-[#f5f5f5]">End iT</p>
+              <p>ABN: 62 445 871 758</p>
+              <p>PO Box 1188</p>
+              <p>South Perth WA 6151</p>
+              <p>Australia</p>
+              <p>Email: {emailLink}</p>
               <p>
-                <a
-                  href="mailto:support@endit.com.au"
-                  className="text-[#fbbf24] underline underline-offset-4"
-                >
-                  support@endit.com.au
-                </a>
-              </p>
-              <p>PO Box 1188, South Perth WA 6151, Australia</p>
-              <p>
+                Website:{" "}
                 <a
                   href="https://endit.com.au"
                   className="text-[#fbbf24] underline underline-offset-4"

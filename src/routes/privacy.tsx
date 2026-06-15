@@ -34,6 +34,21 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
+const emailLink = (
+  <a href="mailto:support@endit.com.au" className="text-[#fbbf24] underline underline-offset-4">
+    support@endit.com.au
+  </a>
+);
+
+const privacyLink = (
+  <a
+    href="https://endit.com.au/privacy"
+    className="text-[#fbbf24] underline underline-offset-4"
+  >
+    https://endit.com.au/privacy
+  </a>
+);
+
 function PrivacyPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5]">
@@ -45,309 +60,425 @@ function PrivacyPage() {
           </p>
           <h1 className="text-4xl font-black tracking-tight">Privacy Policy</h1>
           <div className="mt-4 space-y-0.5 text-sm text-[#f5f5f5]/45">
-            <p>Applies to: Pocket Key Manager</p>
-            <p>Publisher: End iT (ABN: 62 445 871 758)</p>
-            <p>Website: https://endit.com.au</p>
+            <p>Pocket Key Manager</p>
+            <p>Publisher: End iT</p>
+            <p>ABN: 62 445 871 758</p>
+            <p>
+              Website:{" "}
+              <a href="https://endit.com.au" className="text-[#fbbf24]/70 underline underline-offset-4">
+                https://endit.com.au
+              </a>
+            </p>
+            <p>
+              Privacy Policy URL:{" "}
+              <a href="https://endit.com.au/privacy" className="text-[#fbbf24]/70 underline underline-offset-4">
+                https://endit.com.au/privacy
+              </a>
+            </p>
+            <p>Support: {emailLink}</p>
+            <p>Postal address: PO Box 1188, South Perth WA 6151, Australia</p>
             <p>Last updated: 15 June 2026</p>
           </div>
         </div>
 
         <div className="space-y-10">
-          <Section title="1. About This Policy">
+          <Section title="1. Overview">
             <p>
-              This Privacy Policy explains how End iT (ABN: 62 445 871 758) ("End iT", "we",
-              "our", or "us") handles information in connection with the Pocket Key Manager mobile
-              application ("the app").
+              Pocket Key Manager is an offline-first mobile app for managing physical keys in
+              mining, industrial, workplace, and organisational environments.
             </p>
-            <p>
-              Please read this policy carefully. By using the app, you acknowledge that you have
-              read and understood it.
-            </p>
-          </Section>
-
-          <Section title="2. Who We Are">
-            <p>End iT is an Australian business (ABN: 62 445 871 758).</p>
-            <p>
-              Contact:{" "}
-              <a
-                href="mailto:support@endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                support@endit.com.au
-              </a>
-              <br />
-              PO Box 1188, South Perth WA 6151, Australia
-              <br />
-              Website:{" "}
-              <a
-                href="https://endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                https://endit.com.au
-              </a>
-            </p>
-          </Section>
-
-          <Section title="3. The App is Offline-First — No End iT Backend">
-            <p>
-              Pocket Key Manager is an offline-first application. End iT does not operate a
-              backend server, cloud service, or data collection infrastructure for the app.
-            </p>
-            <p>
-              End iT does not collect, receive, access, view, sell, analyse, transmit, or
-              otherwise process any operational data entered into the app. We have no mechanism to
-              do so — the app does not connect to any End iT server.
-            </p>
-          </Section>
-
-          <Section title="4. What Data the App Stores Locally">
-            <p>
-              The app may store the following types of data locally on your device:
-            </p>
+            <p>The app helps users and organisations record and manage:</p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>Key holder names and personal information</li>
-              <li>Physical key copy records and identifiers</li>
-              <li>Lock records and access relationships</li>
-              <li>Booking records</li>
-              <li>Key issue and return records</li>
-              <li>Key state history (damaged, lost, recovered, repaired, retired)</li>
-              <li>Audit logs</li>
-              <li>Backup and export files</li>
+              <li>physical key copies;</li>
+              <li>key profiles and access patterns;</li>
+              <li>locks and lock access;</li>
+              <li>people and key holders;</li>
+              <li>bookings;</li>
+              <li>key issue and return workflows;</li>
+              <li>damaged, lost, recovered, repaired, and retired key states;</li>
+              <li>audit logs;</li>
+              <li>backup and restore files.</li>
+            </ul>
+            <p>Pocket Key Manager is designed to operate locally on the user's device.</p>
+            <p>End iT does not operate a backend server for Pocket Key Manager.</p>
+            <p>
+              End iT does not collect, receive, access, sell, analyse, track, or transmit the
+              operational data entered into the app.
+            </p>
+            <p>
+              However, the app itself may store operational data locally on the user's device.
+              Depending on how the app is used, that local data may include personal information and
+              sensitive operational information.
+            </p>
+            <p>
+              This Privacy Policy explains what the app stores locally, what End iT does and does
+              not receive, and what users and organisations are responsible for.
+            </p>
+          </Section>
+
+          <Section title="2. Who this policy applies to">
+            <p>
+              This Privacy Policy applies to users of the Pocket Key Manager mobile app on Android
+              and iOS.
+            </p>
+            <p>
+              The app is intended for organisational, workplace, mining, industrial, and business
+              use. It is not intended as a consumer social app.
+            </p>
+            <p>
+              Where the app is used by an organisation, that organisation is responsible for
+              deciding what information is entered into the app, who is allowed to access it, and
+              how the information is managed under the organisation's own policies and legal
+              obligations.
+            </p>
+          </Section>
+
+          <Section title="3. Local-only and offline-first design">
+            <p>
+              Pocket Key Manager is designed to work offline and store app data locally on the
+              device.
+            </p>
+            <p>End iT does not provide:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>cloud sync;</li>
+              <li>hosted databases;</li>
+              <li>user accounts;</li>
+              <li>server-side app data processing;</li>
+              <li>analytics dashboards;</li>
+              <li>advertising services;</li>
+              <li>third-party tracking;</li>
+              <li>remote monitoring;</li>
+              <li>remote access to customer data.</li>
             </ul>
             <p>
-              This data is stored in the app's local storage on your device. It is not transmitted
-              to End iT or to any End iT server.
+              End iT does not receive the app's local database or backup files unless a user or
+              organisation chooses to send information to End iT, such as by emailing support with
+              screenshots, files, or exported backup data.
             </p>
           </Section>
 
-          <Section title="5. How App Data is Protected">
+          <Section title="4. Data stored locally in the app">
             <p>
-              App data is protected by the security controls available on your device, including
-              device encryption, screen lock, and app sandboxing provided by the operating system.
-              End iT cannot access, view, or modify data stored in the app.
+              Pocket Key Manager may store operational data entered by the user or organisation on
+              the device.
             </p>
-            <p>
-              You and your organisation are responsible for securing your devices, controlling
-              physical and logical access to devices, and maintaining appropriate information
-              security practices around the app and its data.
-            </p>
-          </Section>
-
-          <Section title="6. PIN Protection">
-            <p>
-              The app includes an optional PIN unlock feature to help protect local app access. If
-              you use a PIN:
-            </p>
+            <p>This may include:</p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>The PIN is stored as a salted cryptographic hash, not in plain text.</li>
-              <li>The hash is stored locally on the device.</li>
-              <li>
-                End iT does not receive, store, or have access to your PIN or its hash.
-              </li>
+              <li>physical key copy records;</li>
+              <li>key profile and access pattern records;</li>
+              <li>lock records;</li>
+              <li>lock access records;</li>
+              <li>names or identifiers of key holders;</li>
+              <li>employee, contractor, visitor, or personnel references entered by the user;</li>
+              <li>booking records;</li>
+              <li>key issue records;</li>
+              <li>key return records;</li>
+              <li>lost key records;</li>
+              <li>damaged key records;</li>
+              <li>recovered key records;</li>
+              <li>repaired key records;</li>
+              <li>retired key records;</li>
+              <li>audit logs and activity history;</li>
+              <li>app settings;</li>
+              <li>backup and restore records;</li>
+              <li>exported backup files created by the user.</li>
             </ul>
             <p>
-              The PIN feature provides a first layer of local app access protection. It does not
-              replace organisational key-control policies, device security measures, or broader
-              information security controls.
+              This information may be sensitive operational information. It may also include
+              personal information if names, identifiers, contact details, employment details, or
+              other information about people are entered into the app.
             </p>
           </Section>
 
-          <Section title="7. Biometric Unlock">
+          <Section title="5. Data End iT does not collect from the app">
+            <p>End iT does not collect or receive the following from Pocket Key Manager:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>app database contents;</li>
+              <li>key holder names;</li>
+              <li>employee or contractor records;</li>
+              <li>physical key records;</li>
+              <li>lock records;</li>
+              <li>lock access records;</li>
+              <li>booking records;</li>
+              <li>issue and return records;</li>
+              <li>audit logs;</li>
+              <li>backup files;</li>
+              <li>PINs;</li>
+              <li>biometric data;</li>
+              <li>analytics events;</li>
+              <li>advertising identifiers;</li>
+              <li>location tracking data;</li>
+              <li>usage tracking data;</li>
+              <li>account profile data;</li>
+              <li>cloud sync data.</li>
+            </ul>
             <p>
-              The app may support biometric unlock (fingerprint or face recognition) as an
-              alternative to PIN entry. If you use biometric unlock:
+              The app does not include analytics, advertising, third-party tracking, cloud sync,
+              app accounts, or server-side operational data processing.
+            </p>
+          </Section>
+
+          <Section title="6. Local database storage">
+            <p>
+              Pocket Key Manager stores app data locally on the device using a local database, such
+              as SQLite/Drift.
+            </p>
+            <p>
+              Because the data is stored locally, End iT cannot view it, recover it, remotely
+              delete it, remotely edit it, or transfer it between devices.
+            </p>
+            <p>
+              Users and organisations are responsible for protecting the device where the app is
+              installed.
+            </p>
+            <p>
+              This includes using appropriate safeguards such as device passcodes, device
+              encryption, operating system updates, access controls, mobile device management, and
+              workplace security policies.
+            </p>
+          </Section>
+
+          <Section title="7. PIN and biometric unlock">
+            <p>
+              Pocket Key Manager may provide local app access protection using a PIN and/or
+              biometric unlock.
+            </p>
+            <p>PIN security uses salted hash storage. The app is not designed to store the plain text PIN.</p>
+            <p>
+              Biometric unlock uses the device operating system's biometric system, such as Face
+              ID, Touch ID, fingerprint unlock, or the Android biometric system.
+            </p>
+            <p>
+              Pocket Key Manager does not receive or store the user's actual fingerprint, face
+              scan, biometric template, or biometric identity data.
+            </p>
+            <p>
+              PIN and biometric unlock can help protect local access to the app. They do not
+              replace proper organisational key-control policies, workplace access procedures,
+              device security controls, staff authorisation checks, audit procedures, incident
+              reporting, or physical key security measures.
+            </p>
+          </Section>
+
+          <Section title="8. Backup, export, import, and sharing">
+            <p>Pocket Key Manager may allow users to export, import, or share backup files.</p>
+            <p>Exported backup files may contain sensitive operational data, including:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>key records;</li>
+              <li>lock records;</li>
+              <li>lock access records;</li>
+              <li>key holder names or identifiers;</li>
+              <li>booking records;</li>
+              <li>issue and return history;</li>
+              <li>damaged key records;</li>
+              <li>lost key records;</li>
+              <li>recovered key records;</li>
+              <li>repaired key records;</li>
+              <li>retired key records;</li>
+              <li>audit logs.</li>
+            </ul>
+            <p>
+              Users and organisations are responsible for where backup files are saved, copied,
+              emailed, uploaded, stored, imported, restored, or shared.
+            </p>
+            <p>
+              End iT does not control third-party storage locations or sharing destinations chosen
+              by the user, such as email apps, messaging apps, cloud drives, file managers,
+              workplace systems, removable storage, or other apps.
+            </p>
+            <p>
+              Before exporting, storing, or sharing a backup file, users should consider whether
+              the file contains sensitive information and whether the destination is authorised by
+              their organisation.
+            </p>
+          </Section>
+
+          <Section title="9. File picker and share features">
+            <p>
+              Pocket Key Manager may use operating system file picker and share features so the
+              user can choose files to import, export, or share.
+            </p>
+            <p>These actions are user-controlled.</p>
+            <p>The app does not automatically upload app data to End iT.</p>
+            <p>
+              When a user chooses to share a file with another app or service, that other app or
+              service may process the file under its own terms and privacy policy.
+            </p>
+            <p>
+              End iT is not responsible for third-party apps, cloud drives, email services,
+              storage providers, messaging services, file managers, or sharing destinations selected
+              by the user.
+            </p>
+          </Section>
+
+          <Section title="10. Device, operating system, and third-party services">
+            <p>Pocket Key Manager runs on Android and iOS devices.</p>
+            <p>
+              Apple, Google, device manufacturers, operating systems, app stores, cloud backup
+              services, email apps, file managers, and other third-party services may collect or
+              process information under their own terms and privacy policies.
+            </p>
+            <p>
+              This Privacy Policy explains End iT's handling of Pocket Key Manager app data. It
+              does not control the privacy practices of Apple, Google, device manufacturers, mobile
+              carriers, cloud storage providers, email providers, or other third-party services.
+            </p>
+            <p>
+              If a user chooses to store exported files in third-party services, those services are
+              responsible for their own handling of that data.
+            </p>
+          </Section>
+
+          <Section title="11. Support requests">
+            <p>
+              If a user contacts End iT for support, End iT may receive information the user
+              chooses to provide.
+            </p>
+            <p>This may include:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>the user's email address;</li>
+              <li>the contents of the support message;</li>
+              <li>screenshots;</li>
+              <li>app version information provided by the user;</li>
+              <li>device information provided by the user;</li>
+              <li>files or exported backup data attached by the user.</li>
+            </ul>
+            <p>
+              Users should not send backup files, screenshots, database exports, or operational
+              records to End iT unless they are authorised to do so and understand that those
+              materials may contain sensitive operational or personal information.
+            </p>
+            <p>
+              If End iT receives support information, End iT will use it only to respond to the
+              support request, troubleshoot the issue, maintain app quality, protect the app, or
+              comply with legal obligations.
+            </p>
+          </Section>
+
+          <Section title="12. Children's privacy">
+            <p>Pocket Key Manager is intended for organisational and business use.</p>
+            <p>The app is not directed to children.</p>
+            <p>
+              End iT does not knowingly collect children's personal information through the app.
+            </p>
+            <p>
+              Organisations using the app are responsible for ensuring that any information entered
+              into the app is lawful and appropriate for their workplace context.
+            </p>
+          </Section>
+
+          <Section title="13. Data deletion">
+            <p>
+              Because Pocket Key Manager stores operational data locally, users and organisations
+              can usually delete app data by:
             </p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>
-                The app uses the biometric authentication system provided by your device's
-                operating system (iOS or Android).
-              </li>
-              <li>
-                The app does not directly access, store, or process your biometric data (such as
-                fingerprint templates or face data).
-              </li>
-              <li>
-                Biometric data is managed entirely by the device operating system, subject to your
-                device manufacturer's and operating system provider's privacy practices.
-              </li>
+              <li>deleting records inside the app where available;</li>
+              <li>deleting exported backup files;</li>
+              <li>clearing app data through device settings;</li>
+              <li>uninstalling the app;</li>
+              <li>wiping or resetting the device;</li>
+              <li>using organisational device management tools.</li>
+            </ul>
+            <p>
+              End iT cannot remotely delete local app data because End iT does not host or control
+              that data.
+            </p>
+            <p>
+              If a user has sent information to End iT through a support request, they may contact{" "}
+              {emailLink} to request deletion of information End iT still holds, subject to any
+              legal, security, or operational retention requirements.
+            </p>
+          </Section>
+
+          <Section title="14. Data security">
+            <p>
+              Pocket Key Manager includes local access protection features, such as PIN and
+              biometric unlock, where enabled.
+            </p>
+            <p>
+              However, no mobile app, device, backup process, file export, or storage method can
+              be guaranteed to be completely secure.
+            </p>
+            <p>Users and organisations should apply appropriate safeguards, including:</p>
+            <ul className="ml-4 list-disc space-y-1">
+              <li>strong device passcodes;</li>
+              <li>device encryption where available;</li>
+              <li>operating system updates;</li>
+              <li>secure storage of backup files;</li>
+              <li>restricted access to exported files;</li>
+              <li>careful use of email and file-sharing tools;</li>
+              <li>secure cloud storage settings where cloud storage is used;</li>
+              <li>mobile device management where appropriate;</li>
+              <li>staff training;</li>
+              <li>workplace key-control procedures;</li>
+              <li>regular review of who can access the app, device, and backup files.</li>
             </ul>
           </Section>
 
-          <Section title="8. No Analytics or Performance Tracking">
+          <Section title="15. Organisational responsibility">
             <p>
-              The app does not include any analytics SDK, telemetry library, crash reporter, or
-              performance monitoring tool that sends data to End iT or to any third party.
-            </p>
-          </Section>
-
-          <Section title="9. No Advertising">
-            <p>
-              The app does not include any advertising SDK, ad network integration, or display
-              advertising of any kind.
-            </p>
-          </Section>
-
-          <Section title="10. No Third-Party Tracking">
-            <p>
-              The app does not include third-party tracking libraries, social media pixels,
-              cross-app tracking tools, or similar technologies.
-            </p>
-          </Section>
-
-          <Section title="11. No Cloud Sync">
-            <p>
-              The app does not automatically sync data to any cloud service operated by End iT or
-              any third party. All data remains local to your device unless you explicitly export
-              it using the app's backup feature.
-            </p>
-          </Section>
-
-          <Section title="12. No App Accounts">
-            <p>
-              The app does not require or offer user accounts, registration, or login credentials
-              managed by End iT. There is no End iT account associated with app usage.
-            </p>
-          </Section>
-
-          <Section title="13. Backup and Export Files">
-            <p>
-              The app provides a backup and restore feature that allows you to export your app
-              data as a file and import it again later. Please be aware:
+              Where Pocket Key Manager is used in a workplace or organisational environment, the
+              organisation is responsible for:
             </p>
             <ul className="ml-4 list-disc space-y-1">
+              <li>deciding what data may be entered into the app;</li>
+              <li>informing staff, contractors, visitors, or other relevant people where required;</li>
+              <li>obtaining any required consents or authorisations;</li>
+              <li>controlling access to the device and app;</li>
+              <li>managing backup files;</li>
+              <li>enforcing key-control procedures;</li>
               <li>
-                Backup files may contain sensitive operational data including key holder names,
-                key records, lock records, audit logs, and other records stored in the app.
-              </li>
-              <li>
-                Backup files are generated and stored entirely by you and under your control.
-              </li>
-              <li>
-                End iT does not receive, store, or have access to your backup files.
-              </li>
-              <li>
-                You and your organisation are responsible for securing backup files, controlling
-                access to them, and handling them in accordance with applicable privacy and
-                information security requirements.
+                complying with privacy, employment, workplace, security, record-keeping, safety,
+                and industry obligations that apply to the organisation.
               </li>
             </ul>
-          </Section>
-
-          <Section title="14. Support Communications">
+            <p>End iT provides Pocket Key Manager as a local record-keeping tool.</p>
             <p>
-              If you contact us by email at{" "}
-              <a
-                href="mailto:support@endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                support@endit.com.au
-              </a>
-              , we will only receive the information you choose to include in your message. We use
-              support emails solely to respond to your request.
-            </p>
-            <p>
-              Please do not send backup files or operational data from the app in support emails
-              unless you have a specific reason and have assessed the sensitivity of the
-              information. End iT cannot access your app database remotely, and backup files are
-              generally not required for support.
+              End iT does not act as the organisation's hosted database provider, cloud processor,
+              key-control officer, security auditor, compliance manager, or workplace safety
+              adviser.
             </p>
           </Section>
 
-          <Section title="15. Children's Privacy">
+          <Section title="16. International use">
             <p>
-              The app is designed for use by organisations and their authorised employees in
-              professional operational settings. The app is not intended for use by children.
+              Pocket Key Manager is designed to store app data locally and does not transmit
+              operational app data to End iT servers.
             </p>
             <p>
-              If you believe a child has used the app or provided personal information through
-              support channels, please contact us at{" "}
-              <a
-                href="mailto:support@endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                support@endit.com.au
-              </a>
-              .
+              If a user chooses to send support information, email attachments, screenshots, or
+              backup files to End iT or another service, that information may be processed in
+              locations determined by the relevant email, hosting, cloud, app store, or support
+              service providers.
             </p>
-          </Section>
-
-          <Section title="16. Deleting Your Data">
             <p>
-              Because End iT does not collect or store your operational data, we cannot delete
-              data on your behalf. To remove app data:
-            </p>
-            <ul className="ml-4 list-disc space-y-1">
-              <li>
-                Uninstall the app from your device to remove locally stored data (subject to
-                your device and operating system's data deletion behaviour).
-              </li>
-              <li>
-                Delete or securely destroy any backup files you have exported.
-              </li>
-            </ul>
-            <p>
-              If you have contacted us by email, you may request deletion of that correspondence
-              by emailing{" "}
-              <a
-                href="mailto:support@endit.com.au"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                support@endit.com.au
-              </a>
-              .
+              Users and organisations should not send sensitive operational data outside approved
+              systems or jurisdictions unless authorised to do so.
             </p>
           </Section>
 
-          <Section title="17. Organisational Responsibility">
+          <Section title="17. Changes to this Privacy Policy">
+            <p>End iT may update this Privacy Policy from time to time.</p>
+            <p>The updated version will be published at: {privacyLink}</p>
+            <p>Users should review this Privacy Policy periodically.</p>
             <p>
-              Pocket Key Manager is a record-keeping tool used by organisations to manage physical
-              key operations. If you are deploying the app within an organisation:
-            </p>
-            <ul className="ml-4 list-disc space-y-1">
-              <li>
-                The organisation is responsible for determining the lawful basis for storing
-                personal information in the app (such as key holder names).
-              </li>
-              <li>
-                The organisation is responsible for complying with applicable privacy laws in
-                respect of data stored locally in the app.
-              </li>
-              <li>
-                End iT does not act as a data processor or data controller in respect of
-                operational data stored in the app.
-              </li>
-            </ul>
-          </Section>
-
-          <Section title="18. Changes to This Policy">
-            <p>
-              We may update this Privacy Policy from time to time. The current version will be
-              published at{" "}
-              <a
-                href="https://endit.com.au/privacy"
-                className="text-[#fbbf24] underline underline-offset-4"
-              >
-                https://endit.com.au/privacy
-              </a>{" "}
-              with the last updated date shown above. We encourage you to review this policy
-              periodically.
+              Continued use of the app after an updated Privacy Policy is published means the
+              updated Privacy Policy applies from the date stated in the policy.
             </p>
           </Section>
 
-          <Section title="19. Contact Us">
-            <p>For privacy-related questions or concerns, please contact:</p>
+          <Section title="18. Contact">
+            <p>For privacy or support questions, contact:</p>
             <div className="mt-2 rounded border border-[#1e1e1e] bg-[#111] p-4">
               <p className="font-semibold text-[#f5f5f5]">End iT</p>
+              <p>ABN: 62 445 871 758</p>
+              <p>PO Box 1188</p>
+              <p>South Perth WA 6151</p>
+              <p>Australia</p>
+              <p>Email: {emailLink}</p>
               <p>
-                <a
-                  href="mailto:support@endit.com.au"
-                  className="text-[#fbbf24] underline underline-offset-4"
-                >
-                  support@endit.com.au
-                </a>
-              </p>
-              <p>PO Box 1188, South Perth WA 6151, Australia</p>
-              <p>
+                Website:{" "}
                 <a
                   href="https://endit.com.au"
                   className="text-[#fbbf24] underline underline-offset-4"
