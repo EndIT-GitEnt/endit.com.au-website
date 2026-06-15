@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://endit.com.au" },
       {
         property: "og:image",
-        content: "https://endit.com.au/assets/brand/endit_social_profile_1200.png",
+        content: "https://endit.com.au/assets/brand/web/endit_social_profile_1200.png",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -115,23 +115,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/assets/brand/favicon.ico" },
+      { rel: "icon", href: "/assets/brand/web/favicon.ico" },
       {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "/assets/brand/favicon-16x16.png",
+        href: "/assets/brand/web/favicon-16x16.png",
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/assets/brand/favicon-32x32.png",
+        href: "/assets/brand/web/favicon-32x32.png",
       },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/assets/brand/apple-touch-icon.png",
+        href: "/assets/brand/web/apple-touch-icon.png",
       },
     ],
   }),

@@ -34,15 +34,32 @@ function HomePage() {
       <SiteHeader />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden px-6 py-24 sm:py-36">
+      <section className="relative overflow-hidden">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcSet="/assets/brand/website_headers/endit_header_tablet_dark_1536x864.png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/assets/brand/website_headers/endit_header_desktop_dark_1920x600.png"
+          />
+          <img
+            src="/assets/brand/website_headers/endit_header_desktop_dark_1920x600.png"
+            alt="End iT"
+            className="w-full object-cover object-center"
+            style={{ maxHeight: "420px" }}
+          />
+        </picture>
+      </section>
+
+      {/* ── Tagline ── */}
+      <section className="relative overflow-hidden px-6 py-16 sm:py-24">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fbbf24] opacity-[0.06] blur-3xl"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fbbf24] opacity-[0.04] blur-3xl"
         />
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
-            End iT
-          </p>
           <h1 className="text-4xl font-black tracking-tight sm:text-6xl md:text-7xl">
             Practical software for{" "}
             <span className="text-[#fbbf24]">serious operational work.</span>

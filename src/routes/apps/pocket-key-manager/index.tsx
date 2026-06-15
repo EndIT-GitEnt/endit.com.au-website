@@ -126,9 +126,16 @@ function PKMPage() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
             End iT — App
           </p>
-          <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
-            Pocket Key Manager
-          </h1>
+          <div className="mb-5 flex items-center gap-5">
+            <img
+              src="/assets/app/pocket_key_manager/web/icon-192.png"
+              alt="Pocket Key Manager icon"
+              className="h-16 w-16 rounded-2xl object-contain sm:h-20 sm:w-20"
+            />
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
+              Pocket Key Manager
+            </h1>
+          </div>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/70">
             Offline-first mobile app for managing physical keys in mining and industrial
             organisations.

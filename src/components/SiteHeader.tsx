@@ -12,7 +12,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
         <a href="/" className="flex items-center gap-3" aria-label="End iT — home">
           <img
-            src="/assets/brand/endit_logo_square_transparent.png"
+            src="/assets/brand/web/endit_logo_square_transparent.png"
             alt=""
             aria-hidden="true"
             className="h-8 w-8 object-contain"
