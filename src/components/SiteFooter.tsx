@@ -4,6 +4,7 @@ const GENERAL_LINKS = [
 ];
 
 const PKM_LINKS = [
+  { href: "/apps/pocket-key-manager", label: "Pocket Key Manager" },
   { href: "/apps/pocket-key-manager/privacy", label: "Privacy Policy" },
   { href: "/apps/pocket-key-manager/terms", label: "Terms of Use" },
   { href: "/apps/pocket-key-manager/support", label: "Support" },

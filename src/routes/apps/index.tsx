@@ -9,7 +9,7 @@ export const Route = createFileRoute("/apps/")({
       {
         name: "description",
         content:
-          "End iT apps. Pocket Key Manager is an offline-first mobile app for managing physical keys in mining and industrial organisations.",
+          "End iT apps. Pocket Key Manager is an offline-first mobile app for managing physical keys for properties, workplaces, facilities teams, landlords, and organisations.",
       },
       { property: "og:title", content: "Apps — End iT" },
       { property: "og:type", content: "website" },
@@ -30,27 +30,43 @@ function AppsIndexPage() {
             End iT
           </p>
           <h1 className="text-4xl font-black tracking-tight sm:text-5xl">Apps</h1>
-          <p className="mt-4 text-base leading-relaxed text-[#f5f5f5]/60">
-            Focused, privacy-conscious apps for real workplace problems.
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-[#f5f5f5]/60">
+            Practical, privacy-conscious mobile software for real operational problems.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <a
             href="/apps/pocket-key-manager"
-            className="group rounded border border-[#1e1e1e] bg-[#111] p-6 transition-colors hover:border-[#fbbf24]/40"
+            className="group overflow-hidden rounded border border-[#1e1e1e] bg-[#111] p-6 transition-colors hover:border-[#fbbf24]/40"
           >
-            <div className="mb-4 h-0.5 w-8 rounded-full bg-[#fbbf24]" />
-            <h2 className="mb-2 text-base font-bold text-[#f5f5f5] group-hover:text-[#fbbf24] transition-colors">
+            <div className="mb-5 flex items-start justify-between gap-4">
+              <img
+                src="/assets/app/pocket_key_manager/web/icon-192.png"
+                alt="Pocket Key Manager icon"
+                className="h-14 w-14 rounded-xl object-contain"
+              />
+              <span className="mt-1 rounded-full bg-[#fbbf24]/10 px-2.5 py-1 text-xs font-semibold text-[#fbbf24]">
+                Coming soon
+              </span>
+            </div>
+            <h2 className="mb-2 text-base font-bold text-[#f5f5f5] transition-colors group-hover:text-[#fbbf24]">
               Pocket Key Manager
             </h2>
-            <p className="text-sm leading-relaxed text-[#f5f5f5]/55">
-              Offline-first mobile app for managing physical keys in mining and industrial
-              organisations.
+            <p className="mb-4 text-sm leading-relaxed text-[#f5f5f5]/55">
+              Offline-first physical key management for properties, workplaces, facilities
+              teams, landlords, and organisations.
             </p>
-            <p className="mt-3 text-xs text-[#f5f5f5]/35">
-              Preparing for Android and iOS release.
-            </p>
-            <p className="mt-4 text-xs font-semibold text-[#fbbf24]/60 group-hover:text-[#fbbf24] transition-colors">
+            <div className="mb-4 flex flex-wrap gap-1.5">
+              {["Android", "iOS"].map((platform) => (
+                <span
+                  key={platform}
+                  className="rounded border border-[#2a2a2a] px-2 py-0.5 text-xs text-[#f5f5f5]/35"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
+            <p className="text-xs font-semibold text-[#fbbf24]/60 transition-colors group-hover:text-[#fbbf24]">
               View app details →
             </p>
           </a>
