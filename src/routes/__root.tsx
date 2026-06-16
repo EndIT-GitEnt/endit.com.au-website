@@ -112,20 +112,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "End iT builds focused, privacy-conscious apps for real workplace problems.",
       },
+      { name: "msapplication-TileColor", content: "#020A18" },
+      { name: "theme-color", content: "#0a0a0a" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicon-32x32.png",
-      },
-      {
-        rel: "apple-touch-icon",
-        href: "/apple-touch-icon.png",
-      },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#fbbf24" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   shellComponent: RootShell,

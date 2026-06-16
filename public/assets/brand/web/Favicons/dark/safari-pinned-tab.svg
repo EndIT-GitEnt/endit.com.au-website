@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="End iT favicon symbol">
+  <rect width="512" height="512" fill="none"/>
+  <g font-family="Inter, Arial, Helvetica, sans-serif" font-weight="300">
+    <text x="156" y="326" font-size="210" fill="#FF7F00">{</text>
+    <text x="265" y="326" font-size="210" fill="#FF7F00">}</text>
+  </g>
+  <circle cx="206" cy="140" r="20" fill="#FF7F00"/>
+  <rect x="301" y="125" width="72" height="15" rx="7.5" fill="#FF7F00"/>
+</svg>
