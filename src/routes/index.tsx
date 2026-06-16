@@ -309,6 +309,33 @@ function HomePage() {
                   <ArrowRightIcon />
                 </a>
               </div>
+              <div className="hidden shrink-0 lg:flex lg:gap-3">
+                {[
+                  {
+                    src: "/assets/app/pocket_key_manager/Sreenshots/Dashboard.jpg",
+                    alt: "Pocket Key Manager dashboard overview",
+                  },
+                  {
+                    src: "/assets/app/pocket_key_manager/Sreenshots/Bookings_Booking.jpg",
+                    alt: "Pocket Key Manager booking detail screen",
+                  },
+                ].map(({ src, alt }) => (
+                  <div
+                    key={src}
+                    className="w-[78px] overflow-hidden rounded-[1.5rem] border border-[#272727] shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+                  >
+                    <img
+                      src={src}
+                      alt={alt}
+                      loading="lazy"
+                      decoding="async"
+                      width={1080}
+                      height={2340}
+                      className="block w-full"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

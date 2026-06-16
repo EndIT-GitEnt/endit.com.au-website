@@ -161,6 +161,39 @@ const PRIVACY_POINTS = [
   "Backups are user-controlled export files",
 ];
 
+const SCREENSHOTS = [
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/Dashboard.jpg",
+    alt: "Pocket Key Manager dashboard showing keys issued, overdue keys, available keys, sites, locks and key profiles at a glance",
+    caption: "Dashboard",
+  },
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/Keys.jpg",
+    alt: "Keys screen listing key profiles including Master Access and Standard Entry",
+    caption: "Key profiles",
+  },
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/Bookings_Booking.jpg",
+    alt: "Booking detail screen showing scheduled key requirements and one-tap issue actions",
+    caption: "Bookings",
+  },
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/Key_Exceptions.jpg",
+    alt: "Key exceptions screen tracking lost and damaged keys with status filter tabs",
+    caption: "Key exceptions",
+  },
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/More.jpg",
+    alt: "More menu listing all app features: People, Issue Key, Key Exceptions, Audit Log, Backup and Restore, Settings, and Guide",
+    caption: "All features",
+  },
+  {
+    src: "/assets/app/pocket_key_manager/Sreenshots/Backup_And_Restore.jpg",
+    alt: "Backup and Restore screen with export and import options, confirming data stays entirely under user control",
+    caption: "Backup & restore",
+  },
+];
+
 // ── Icons ─────────────────────────────────────────────────────────────────────
 
 function CheckIcon() {
@@ -474,6 +507,41 @@ function PKMPage() {
                   <p className="mb-1 text-sm font-bold text-[#f5f5f5]">{label}</p>
                   <p className="text-sm leading-relaxed text-[#f5f5f5]/55">{desc}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Screenshots ── */}
+      <section className="border-b border-[#1a1a1a] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#fbbf24]">
+              In action
+            </p>
+            <h2 className="text-2xl font-black tracking-tight sm:text-3xl">
+              See Pocket Key Manager in action
+            </h2>
+            <p className="mt-3 max-w-xl text-base leading-relaxed text-[#f5f5f5]/55">
+              Real screens from the app — offline, private, and ready to use from day one.
+            </p>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-4 sm:gap-5">
+            {SCREENSHOTS.map(({ src, alt, caption }) => (
+              <div key={src} className="w-[155px] shrink-0 sm:w-[185px]">
+                <div className="overflow-hidden rounded-[2rem] border border-[#272727] shadow-[0_8px_40px_rgba(0,0,0,0.55)]">
+                  <img
+                    src={src}
+                    alt={alt}
+                    loading="lazy"
+                    decoding="async"
+                    width={1080}
+                    height={2340}
+                    className="block w-full"
+                  />
+                </div>
+                <p className="mt-2.5 text-center text-xs text-[#f5f5f5]/40">{caption}</p>
               </div>
             ))}
           </div>
