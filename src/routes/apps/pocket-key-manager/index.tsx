@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { SiteFooter } from "../../../components/SiteFooter";
@@ -365,9 +366,77 @@ function UsersIcon() {
   );
 }
 
+function CloseIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+
+type LightboxItem = { src: string; alt: string; caption: string };
+
+function ScreenshotLightbox({ item, onClose }: { item: LightboxItem; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${item.caption} screenshot`}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" aria-hidden="true" />
+      <div
+        className="relative z-10 flex max-h-[90dvh] w-full max-w-xs flex-col items-center gap-4 sm:max-w-sm"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close screenshot"
+          className="self-end rounded-full border border-[#2a2a2a] bg-[#111] p-2 text-[#f5f5f5]/60 transition-colors hover:border-[#fbbf24]/40 hover:text-[#fbbf24]"
+        >
+          <CloseIcon />
+        </button>
+        <div className="overflow-hidden rounded-[2.5rem] border border-[#272727] shadow-[0_16px_60px_rgba(0,0,0,0.8)]">
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="block max-h-[75dvh] w-auto object-contain"
+          />
+        </div>
+        <p className="text-sm font-medium text-[#f5f5f5]/60">{item.caption}</p>
+      </div>
+    </div>
+  );
+}
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 function PKMPage() {
+  const [lightbox, setLightbox] = useState<LightboxItem | null>(null);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5]">
       <SiteHeader />
@@ -530,18 +599,27 @@ function PKMPage() {
           <div className="flex gap-4 overflow-x-auto pb-4 sm:gap-5">
             {SCREENSHOTS.map(({ src, alt, caption }) => (
               <div key={src} className="w-[155px] shrink-0 sm:w-[185px]">
-                <div className="overflow-hidden rounded-[2rem] border border-[#272727] shadow-[0_8px_40px_rgba(0,0,0,0.55)]">
-                  <img
-                    src={src}
-                    alt={alt}
-                    loading="lazy"
-                    decoding="async"
-                    width={1080}
-                    height={2340}
-                    className="block w-full"
-                  />
-                </div>
-                <p className="mt-2.5 text-center text-xs text-[#f5f5f5]/40">{caption}</p>
+                <button
+                  type="button"
+                  onClick={() => setLightbox({ src, alt, caption })}
+                  aria-label={`View ${caption} screenshot`}
+                  className="group w-full text-left"
+                >
+                  <div className="overflow-hidden rounded-[2rem] border border-[#272727] shadow-[0_8px_40px_rgba(0,0,0,0.55)] transition-[border-color] group-hover:border-[#fbbf24]/40">
+                    <img
+                      src={src}
+                      alt={alt}
+                      loading="lazy"
+                      decoding="async"
+                      width={1080}
+                      height={2340}
+                      className="block w-full"
+                    />
+                  </div>
+                  <p className="mt-2.5 text-center text-xs text-[#f5f5f5]/40 transition-colors group-hover:text-[#f5f5f5]/60">
+                    {caption}
+                  </p>
+                </button>
               </div>
             ))}
           </div>
@@ -668,6 +746,8 @@ function PKMPage() {
       </section>
 
       <SiteFooter />
+
+      {lightbox && <ScreenshotLightbox item={lightbox} onClose={closeLightbox} />}
     </div>
   );
 }
