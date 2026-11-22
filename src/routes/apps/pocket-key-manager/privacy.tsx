@@ -230,8 +230,8 @@ function PKMPrivacyPage() {
               <li>cloud sync data.</li>
             </ul>
             <p>
-              The app does not include analytics, advertising, third-party tracking, cloud sync,
-              app accounts, or server-side operational data processing.
+              The app does not include analytics, advertising, third-party tracking, cloud sync, app
+              accounts, or server-side operational data processing.
             </p>
           </Section>
 
@@ -241,8 +241,8 @@ function PKMPrivacyPage() {
               as SQLite/Drift.
             </p>
             <p>
-              Because the data is stored locally, End iT cannot view it, recover it, remotely
-              delete it, remotely edit it, or transfer it between devices.
+              Because the data is stored locally, End iT cannot view it, recover it, remotely delete
+              it, remotely edit it, or transfer it between devices.
             </p>
             <p>
               Users and organisations are responsible for protecting the device where the app is
@@ -260,20 +260,23 @@ function PKMPrivacyPage() {
               Pocket Key Manager may provide local app access protection using a PIN and/or
               biometric unlock.
             </p>
-            <p>PIN security uses salted hash storage. The app is not designed to store the plain text PIN.</p>
             <p>
-              Biometric unlock uses the device operating system's biometric system, such as Face
-              ID, Touch ID, fingerprint unlock, or the Android biometric system.
+              PIN security uses salted hash storage. The app is not designed to store the plain text
+              PIN.
             </p>
             <p>
-              Pocket Key Manager does not receive or store the user's actual fingerprint, face
-              scan, biometric template, or biometric identity data.
+              Biometric unlock uses the device operating system's biometric system, such as Face ID,
+              Touch ID, fingerprint unlock, or the Android biometric system.
             </p>
             <p>
-              PIN and biometric unlock can help protect local access to the app. They do not
-              replace proper organisational key-control policies, workplace access procedures,
-              device security controls, staff authorisation checks, audit procedures, incident
-              reporting, or physical key security measures.
+              Pocket Key Manager does not receive or store the user's actual fingerprint, face scan,
+              biometric template, or biometric identity data.
+            </p>
+            <p>
+              PIN and biometric unlock can help protect local access to the app. They do not replace
+              proper organisational key-control policies, workplace access procedures, device
+              security controls, staff authorisation checks, audit procedures, incident reporting,
+              or physical key security measures.
             </p>
           </Section>
 
@@ -304,16 +307,16 @@ function PKMPrivacyPage() {
               workplace systems, removable storage, or other apps.
             </p>
             <p>
-              Before exporting, storing, or sharing a backup file, users should consider whether
-              the file contains sensitive information and whether the destination is authorised by
-              their organisation.
+              Before exporting, storing, or sharing a backup file, users should consider whether the
+              file contains sensitive information and whether the destination is authorised by their
+              organisation.
             </p>
           </Section>
 
           <Section title="9. File picker and share features">
             <p>
-              Pocket Key Manager may use operating system file picker and share features so the
-              user can choose files to import, export, or share.
+              Pocket Key Manager may use operating system file picker and share features so the user
+              can choose files to import, export, or share.
             </p>
             <p>These actions are user-controlled.</p>
             <p>The app does not automatically upload app data to End iT.</p>
@@ -322,9 +325,9 @@ function PKMPrivacyPage() {
               service may process the file under its own terms and privacy policy.
             </p>
             <p>
-              End iT is not responsible for third-party apps, cloud drives, email services,
-              storage providers, messaging services, file managers, or sharing destinations selected
-              by the user.
+              End iT is not responsible for third-party apps, cloud drives, email services, storage
+              providers, messaging services, file managers, or sharing destinations selected by the
+              user.
             </p>
           </Section>
 
@@ -336,8 +339,8 @@ function PKMPrivacyPage() {
               process information under their own terms and privacy policies.
             </p>
             <p>
-              This Privacy Policy explains End iT's handling of Pocket Key Manager app data. It
-              does not control the privacy practices of Apple, Google, device manufacturers, mobile
+              This Privacy Policy explains End iT's handling of Pocket Key Manager app data. It does
+              not control the privacy practices of Apple, Google, device manufacturers, mobile
               carriers, cloud storage providers, email providers, or other third-party services.
             </p>
             <p>
@@ -348,8 +351,8 @@ function PKMPrivacyPage() {
 
           <Section title="11. Support requests">
             <p>
-              If a user contacts End iT for support, End iT may receive information the user
-              chooses to provide.
+              If a user contacts End iT for support, End iT may receive information the user chooses
+              to provide.
             </p>
             <p>This may include:</p>
             <ul className="ml-4 list-disc space-y-1">
@@ -414,8 +417,8 @@ function PKMPrivacyPage() {
               biometric unlock, where enabled.
             </p>
             <p>
-              However, no mobile app, device, backup process, file export, or storage method can
-              be guaranteed to be completely secure.
+              However, no mobile app, device, backup process, file export, or storage method can be
+              guaranteed to be completely secure.
             </p>
             <p>Users and organisations should apply appropriate safeguards, including:</p>
             <ul className="ml-4 list-disc space-y-1">
@@ -440,14 +443,16 @@ function PKMPrivacyPage() {
             </p>
             <ul className="ml-4 list-disc space-y-1">
               <li>deciding what data may be entered into the app;</li>
-              <li>informing staff, contractors, visitors, or other relevant people where required;</li>
+              <li>
+                informing staff, contractors, visitors, or other relevant people where required;
+              </li>
               <li>obtaining any required consents or authorisations;</li>
               <li>controlling access to the device and app;</li>
               <li>managing backup files;</li>
               <li>enforcing key-control procedures;</li>
               <li>
-                complying with privacy, employment, workplace, security, record-keeping, safety,
-                and industry obligations that apply to the organisation.
+                complying with privacy, employment, workplace, security, record-keeping, safety, and
+                industry obligations that apply to the organisation.
               </li>
             </ul>
             <p>End iT provides Pocket Key Manager as a local record-keeping tool.</p>

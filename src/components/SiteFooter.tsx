@@ -62,9 +62,7 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <p className="mt-8 text-xs text-[#f5f5f5]/20">
-          © {year} End iT. All rights reserved.
-        </p>
+        <p className="mt-8 text-xs text-[#f5f5f5]/20">© {year} End iT. All rights reserved.</p>
       </div>
     </footer>
   );

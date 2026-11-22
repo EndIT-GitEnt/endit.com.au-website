@@ -29,9 +29,7 @@ function SupportIndexPage() {
             End iT
           </p>
           <h1 className="text-4xl font-black tracking-tight">Support</h1>
-          <p className="mt-3 text-base text-[#f5f5f5]/60">
-            Select an app for support.
-          </p>
+          <p className="mt-3 text-base text-[#f5f5f5]/60">Select an app for support.</p>
         </div>
         <div className="space-y-4">
           <a

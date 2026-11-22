@@ -113,8 +113,8 @@ function PKMTermsPage() {
               These Terms of Use apply to the Pocket Key Manager mobile app published by End iT.
             </p>
             <p>
-              By downloading, installing, accessing, or using Pocket Key Manager, you agree to
-              these Terms.
+              By downloading, installing, accessing, or using Pocket Key Manager, you agree to these
+              Terms.
             </p>
             <p>
               If you are using the app on behalf of an organisation, you confirm that you are
@@ -154,8 +154,8 @@ function PKMTermsPage() {
               organisational use.
             </p>
             <p>
-              You and your organisation are responsible for deciding whether the app is suitable
-              for your operational, legal, security, privacy, workplace, safety, audit, and
+              You and your organisation are responsible for deciding whether the app is suitable for
+              your operational, legal, security, privacy, workplace, safety, audit, and
               record-keeping requirements.
             </p>
             <p>
@@ -165,9 +165,7 @@ function PKMTermsPage() {
           </Section>
 
           <Section title="4. Local-only app model">
-            <p>
-              Pocket Key Manager is designed to operate offline and locally on the device.
-            </p>
+            <p>Pocket Key Manager is designed to operate offline and locally on the device.</p>
             <p>End iT does not operate a backend server for the app.</p>
             <p>End iT does not:</p>
             <ul className="ml-4 list-disc space-y-1">
@@ -181,9 +179,9 @@ function PKMTermsPage() {
               <li>provide server-side data processing.</li>
             </ul>
             <p>
-              Because the app data is local, End iT cannot recover lost local data, restore
-              deleted records, access your app database, reset your local operational records, or
-              remotely remove information from your device.
+              Because the app data is local, End iT cannot recover lost local data, restore deleted
+              records, access your app database, reset your local operational records, or remotely
+              remove information from your device.
             </p>
           </Section>
 
@@ -215,8 +213,8 @@ function PKMTermsPage() {
 
           <Section title="6. PIN and biometric unlock">
             <p>
-              Pocket Key Manager may include local access protection features such as PIN unlock
-              and biometric unlock.
+              Pocket Key Manager may include local access protection features such as PIN unlock and
+              biometric unlock.
             </p>
             <p>
               These features are intended to reduce casual or unauthorised local access to the app.
@@ -234,8 +232,8 @@ function PKMTermsPage() {
               <li>legal or compliance obligations.</li>
             </ul>
             <p>
-              Your organisation should continue to maintain appropriate operational controls
-              outside the app.
+              Your organisation should continue to maintain appropriate operational controls outside
+              the app.
             </p>
           </Section>
 
@@ -243,9 +241,7 @@ function PKMTermsPage() {
             <p>
               Pocket Key Manager may allow users to export, import, share, or restore backup files.
             </p>
-            <p>
-              Backup files may contain sensitive operational data, including information about:
-            </p>
+            <p>Backup files may contain sensitive operational data, including information about:</p>
             <ul className="ml-4 list-disc space-y-1">
               <li>keys;</li>
               <li>locks;</li>
@@ -274,9 +270,7 @@ function PKMTermsPage() {
                 organisational policy;
               </li>
               <li>securely deleting backup files when they are no longer needed;</li>
-              <li>
-                keeping backup files available if you need to restore app data later.
-              </li>
+              <li>keeping backup files available if you need to restore app data later.</li>
             </ul>
             <p>
               End iT is not responsible for backup files that you export, share, store, email,
@@ -290,8 +284,8 @@ function PKMTermsPage() {
               recovery.
             </p>
             <p>
-              If a device is lost, damaged, wiped, replaced, inaccessible, or stolen, app data
-              may be lost unless you have created and safely stored a usable backup.
+              If a device is lost, damaged, wiped, replaced, inaccessible, or stolen, app data may
+              be lost unless you have created and safely stored a usable backup.
             </p>
             <p>
               You should test your backup and restore procedures before relying on the app in an
@@ -355,23 +349,23 @@ function PKMTermsPage() {
               workplace safety, employment, audit, insurance, or risk-management advice.
             </p>
             <p>
-              You should obtain appropriate professional advice before relying on the app as part
-              of a formal compliance, safety, security, audit, or legal framework.
+              You should obtain appropriate professional advice before relying on the app as part of
+              a formal compliance, safety, security, audit, or legal framework.
             </p>
           </Section>
 
           <Section title="12. App updates and changes">
             <p>
-              End iT may update, improve, modify, suspend, or discontinue parts of the app from
-              time to time.
+              End iT may update, improve, modify, suspend, or discontinue parts of the app from time
+              to time.
             </p>
             <p>
               Updates may include bug fixes, security improvements, workflow changes, compatibility
               changes, database changes, user interface changes, or feature changes.
             </p>
             <p>
-              You are responsible for deciding whether and when to install updates, subject to
-              your app store, device, and organisational policies.
+              You are responsible for deciding whether and when to install updates, subject to your
+              app store, device, and organisational policies.
             </p>
             <p>
               Some updates may be required for compatibility, security, or app store availability.
@@ -391,8 +385,8 @@ function PKMTermsPage() {
             </p>
             <p>
               End iT is not responsible for third-party platforms, devices, operating systems, app
-              stores, cloud drives, email services, sharing destinations, storage providers, or
-              file managers selected by the user.
+              stores, cloud drives, email services, sharing destinations, storage providers, or file
+              managers selected by the user.
             </p>
           </Section>
 
@@ -409,8 +403,8 @@ function PKMTermsPage() {
             <p>Apple has no obligation to provide maintenance or support for the app.</p>
             <p>
               If the app fails to meet an applicable warranty, you may notify Apple, and Apple may
-              refund the purchase price if required under its terms. To the maximum extent
-              permitted by law, Apple has no other warranty obligation for the app.
+              refund the purchase price if required under its terms. To the maximum extent permitted
+              by law, Apple has no other warranty obligation for the app.
             </p>
             <p>
               Apple is not responsible for claims relating to the app or your use of the app,
@@ -453,9 +447,8 @@ function PKMTermsPage() {
               iT to use them to improve the app without obligation to compensate you.
             </p>
             <p>
-              You should not include confidential operational data, sensitive backup files,
-              personal information, or workplace records in feedback unless you are authorised to
-              do so.
+              You should not include confidential operational data, sensitive backup files, personal
+              information, or workplace records in feedback unless you are authorised to do so.
             </p>
           </Section>
 
@@ -475,26 +468,23 @@ function PKMTermsPage() {
 
           <Section title="19. Privacy">
             <p>
-              Your use of Pocket Key Manager is also covered by the Privacy Policy at:{" "}
-              {privacyLink}
+              Your use of Pocket Key Manager is also covered by the Privacy Policy at: {privacyLink}
             </p>
             <p>The app is designed to store operational data locally on the device.</p>
             <p>
               End iT does not collect, receive, access, sell, analyse, track, or transmit the
-              operational data entered into the app unless you choose to send information to End
-              iT, such as through a support request.
+              operational data entered into the app unless you choose to send information to End iT,
+              such as through a support request.
             </p>
           </Section>
 
           <Section title="20. Disclaimer">
-            <p>
-              Pocket Key Manager is provided on an "as is" and "as available" basis.
-            </p>
+            <p>Pocket Key Manager is provided on an "as is" and "as available" basis.</p>
             <p>
               End iT aims to provide a useful and reliable app, but End iT does not guarantee that
-              the app will be error-free, uninterrupted, secure against all threats, compatible
-              with every device, suitable for every organisation, or compliant with every legal,
-              safety, operational, audit, or security requirement.
+              the app will be error-free, uninterrupted, secure against all threats, compatible with
+              every device, suitable for every organisation, or compliant with every legal, safety,
+              operational, audit, or security requirement.
             </p>
             <p>
               You are responsible for testing the app and deciding whether it is appropriate for
@@ -504,8 +494,8 @@ function PKMTermsPage() {
 
           <Section title="21. Australian consumer rights">
             <p>
-              Nothing in these Terms excludes, restricts, or modifies any consumer guarantee,
-              right, remedy, or protection that cannot be excluded, restricted, or modified under
+              Nothing in these Terms excludes, restricts, or modifies any consumer guarantee, right,
+              remedy, or protection that cannot be excluded, restricted, or modified under
               Australian Consumer Law or other applicable law.
             </p>
             <p>
@@ -531,9 +521,7 @@ function PKMTermsPage() {
               <li>device failure;</li>
               <li>operating system issues;</li>
               <li>app store issues;</li>
-              <li>
-                third-party file sharing, email, storage, messaging, or cloud services;
-              </li>
+              <li>third-party file sharing, email, storage, messaging, or cloud services;</li>
               <li>use of the app in breach of these Terms;</li>
               <li>
                 use of the app in a way that is not suitable for the organisation's requirements.
@@ -548,8 +536,8 @@ function PKMTermsPage() {
           <Section title="23. Indemnity">
             <p>
               If you use Pocket Key Manager on behalf of an organisation, your organisation is
-              responsible for its use of the app, the data entered into it, and the way users
-              manage devices and backup files.
+              responsible for its use of the app, the data entered into it, and the way users manage
+              devices and backup files.
             </p>
             <p>
               To the extent permitted by law, you agree to protect End iT from claims, losses,
@@ -580,9 +568,7 @@ function PKMTermsPage() {
           </Section>
 
           <Section title="25. Governing law">
-            <p>
-              These Terms are governed by the laws of Western Australia, Australia.
-            </p>
+            <p>These Terms are governed by the laws of Western Australia, Australia.</p>
             <p>
               Any disputes will be handled by the courts and tribunals of Western Australia,
               Australia, unless applicable law requires otherwise.
