@@ -45,9 +45,7 @@ function PKMSupportPage() {
             End iT
           </p>
           <h1 className="text-4xl font-black tracking-tight">Support</h1>
-          <p className="mt-3 text-base text-[#f5f5f5]/60">
-            Pocket Key Manager
-          </p>
+          <p className="mt-3 text-base text-[#f5f5f5]/60">Pocket Key Manager</p>
         </div>
 
         <div className="space-y-12">
@@ -80,8 +78,8 @@ function PKMSupportPage() {
                 <span className="font-semibold text-[#f5f5f5]">App name</span> — Pocket Key Manager
               </li>
               <li>
-                <span className="font-semibold text-[#f5f5f5]">App version</span> — visible in
-                the app's settings or about screen
+                <span className="font-semibold text-[#f5f5f5]">App version</span> — visible in the
+                app's settings or about screen
               </li>
               <li>
                 <span className="font-semibold text-[#f5f5f5]">
@@ -96,14 +94,12 @@ function PKMSupportPage() {
                 — what you expected to happen, and what actually happened
               </li>
               <li>
-                <span className="font-semibold text-[#f5f5f5]">
-                  Steps to reproduce the problem
-                </span>
+                <span className="font-semibold text-[#f5f5f5]">Steps to reproduce the problem</span>
                 , if possible — the specific actions that lead to the issue
               </li>
               <li>
-                <span className="font-semibold text-[#f5f5f5]">Screenshots</span> — only if they
-                do not expose sensitive operational data
+                <span className="font-semibold text-[#f5f5f5]">Screenshots</span> — only if they do
+                not expose sensitive operational data
               </li>
             </ol>
           </section>
@@ -123,9 +119,9 @@ function PKMSupportPage() {
                 assessed the sensitivity of the information.
               </p>
               <p>
-                Backup files may contain sensitive information about your key holders, keys,
-                locks, bookings, and operational records. Sharing this data by email is rarely
-                necessary for a support request.
+                Backup files may contain sensitive information about your key holders, keys, locks,
+                bookings, and operational records. Sharing this data by email is rarely necessary
+                for a support request.
               </p>
               <p>
                 If you believe sharing a backup file is necessary for your support request, please
@@ -139,14 +135,14 @@ function PKMSupportPage() {
             <h2 className="mb-4 text-xl font-bold text-[#f5f5f5]">Data Recovery</h2>
             <div className="space-y-3 text-sm leading-relaxed text-[#f5f5f5]/70">
               <p>
-                Pocket Key Manager stores all data locally on your device. End iT does not
-                operate a backend server for the app and cannot remotely access, view, or recover
-                your app database.
+                Pocket Key Manager stores all data locally on your device. End iT does not operate a
+                backend server for the app and cannot remotely access, view, or recover your app
+                database.
               </p>
               <p>
-                If you experience data loss due to device failure, accidental deletion, or any
-                other reason, the only recovery option is a backup file created using the app's
-                built-in backup and restore feature.
+                If you experience data loss due to device failure, accidental deletion, or any other
+                reason, the only recovery option is a backup file created using the app's built-in
+                backup and restore feature.
               </p>
               <p>
                 We strongly recommend creating regular backups using the app and storing those

@@ -6,11 +6,11 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,12 +37,9 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#0a0a0a] px-6 text-[#f5f5f5]">
@@ -92,8 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:description",
-        content:
-          "End iT builds focused, privacy-conscious apps for real workplace problems.",
+        content: "End iT builds focused, privacy-conscious apps for real workplace problems.",
       },
       { property: "og:site_name", content: "End iT" },
       { property: "og:type", content: "website" },
@@ -109,8 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         name: "twitter:description",
-        content:
-          "End iT builds focused, privacy-conscious apps for real workplace problems.",
+        content: "End iT builds focused, privacy-conscious apps for real workplace problems.",
       },
       { name: "msapplication-TileColor", content: "#020A18" },
       { name: "theme-color", content: "#0a0a0a" },

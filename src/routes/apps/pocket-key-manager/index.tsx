@@ -45,8 +45,7 @@ const BUILT_FOR = [
   },
   {
     title: "Landlords",
-    description:
-      "Manage master keys, spare copies, and access records for your rental properties.",
+    description: "Manage master keys, spare copies, and access records for your rental properties.",
     Icon: HomeIcon,
   },
   {
@@ -83,13 +82,11 @@ const FEATURES = [
   },
   {
     title: "Locks and access profiles",
-    description:
-      "Define key profiles and document which locks each key accesses across your site.",
+    description: "Define key profiles and document which locks each key accesses across your site.",
   },
   {
     title: "Key holders",
-    description:
-      "Manage people and key holders, including assigned keys and access patterns.",
+    description: "Manage people and key holders, including assigned keys and access patterns.",
   },
   {
     title: "Bookings",
@@ -103,8 +100,7 @@ const FEATURES = [
   },
   {
     title: "Lost, damaged, recovered and retired key states",
-    description:
-      "Track lost, damaged, recovered, and retired keys through their full lifecycle.",
+    description: "Track lost, damaged, recovered, and retired keys through their full lifecycle.",
   },
   {
     title: "Audit logs",
@@ -392,7 +388,9 @@ type LightboxItem = { src: string; alt: string; caption: string };
 
 function ScreenshotLightbox({ item, onClose }: { item: LightboxItem; onClose: () => void }) {
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
@@ -464,9 +462,7 @@ function PKMPage() {
           <p className="mx-auto mt-5 max-w-xl text-xl leading-relaxed text-[#f5f5f5]/70">
             Offline physical key management for properties, workplaces and organisations.
           </p>
-          <p className="mt-3 text-base text-[#f5f5f5]/45">
-            Coming soon for Android and iOS.
-          </p>
+          <p className="mt-3 text-base text-[#f5f5f5]/45">Coming soon for Android and iOS.</p>
 
           <div className="mx-auto mt-8 max-w-xl rounded border border-[#fbbf24]/20 bg-[#fbbf24]/5 px-6 py-4 text-sm font-medium text-[#fbbf24]/80">
             Offline-first. No End iT backend. Your operational data stays under your control.
@@ -539,10 +535,7 @@ function PKMPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {FEATURES.map((feature) => (
-              <div
-                key={feature.title}
-                className="rounded border border-[#1e1e1e] bg-[#111] p-5"
-              >
+              <div key={feature.title} className="rounded border border-[#1e1e1e] bg-[#111] p-5">
                 <div className="mb-3 h-0.5 w-8 rounded-full bg-[#fbbf24]" />
                 <h3 className="mb-2 text-sm font-semibold text-[#f5f5f5]">{feature.title}</h3>
                 <p className="text-sm leading-relaxed text-[#f5f5f5]/55">{feature.description}</p>
@@ -563,12 +556,16 @@ function PKMPage() {
               Simple, structured key management
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#f5f5f5]/50">
-              Create keys → assign access → book keys → issue keys → return keys → review audit history
+              Create keys → assign access → book keys → issue keys → return keys → review audit
+              history
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {HOW_IT_WORKS.map(({ step, label, desc }) => (
-              <div key={step} className="flex gap-4 rounded border border-[#1e1e1e] bg-[#0f0f0f] p-5">
+              <div
+                key={step}
+                className="flex gap-4 rounded border border-[#1e1e1e] bg-[#0f0f0f] p-5"
+              >
                 <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#fbbf24]/30 bg-[#fbbf24]/5 text-sm font-black text-[#fbbf24]">
                   {step}
                 </div>
@@ -638,19 +635,13 @@ function PKMPage() {
                 Offline-first. No End iT backend. Your operational data stays under your control.
               </h2>
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#f5f5f5]/70">
-                <p>
-                  End iT does not operate a backend server for Pocket Key Manager.
-                </p>
-                <p>
-                  Operational app data is stored locally on the user's device.
-                </p>
+                <p>End iT does not operate a backend server for Pocket Key Manager.</p>
+                <p>Operational app data is stored locally on the user's device.</p>
                 <p>
                   End iT does not collect, receive, access, sell, analyse, track, or transmit
                   operational app data.
                 </p>
-                <p>
-                  Backups are user-controlled export files.
-                </p>
+                <p>Backups are user-controlled export files.</p>
               </div>
               <div className="mt-8">
                 <a
@@ -689,8 +680,8 @@ function PKMPage() {
               Coming soon on Android and iOS
             </h2>
             <p className="mt-3 max-w-xl text-base leading-relaxed text-[#f5f5f5]/55">
-              Pocket Key Manager is currently being prepared for release on Google Play
-              and the App Store.
+              Pocket Key Manager is currently being prepared for release on Google Play and the App
+              Store.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

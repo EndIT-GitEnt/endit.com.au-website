@@ -206,9 +206,9 @@ function HomePage() {
             <span className="text-[#fbbf24]">real-world operational control.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/70">
-            End iT builds practical mobile software for properties, workplaces,
-            facilities, mining, industrial teams, landlords, and organisations
-            that need reliable tools without unnecessary cloud dependency.
+            End iT builds practical mobile software for properties, workplaces, facilities, mining,
+            industrial teams, landlords, and organisations that need reliable tools without
+            unnecessary cloud dependency.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -233,10 +233,7 @@ function HomePage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-4 sm:grid-cols-3">
             {PRINCIPLES.map(({ Icon, title, desc }) => (
-              <div
-                key={title}
-                className="rounded border border-[#1e1e1e] bg-[#0f0f0f] p-6"
-              >
+              <div key={title} className="rounded border border-[#1e1e1e] bg-[#0f0f0f] p-6">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#fbbf24]/10 text-[#fbbf24]">
                   <Icon />
                 </div>
@@ -280,9 +277,7 @@ function HomePage() {
                 <p className="mb-2 text-base leading-relaxed text-[#f5f5f5]/70">
                   Offline physical key management for properties, workplaces and organisations.
                 </p>
-                <p className="mb-6 text-sm text-[#f5f5f5]/45">
-                  Coming soon for Android and iOS.
-                </p>
+                <p className="mb-6 text-sm text-[#f5f5f5]/45">Coming soon for Android and iOS.</p>
                 <div className="mb-7 flex flex-wrap gap-2">
                   <span className="inline-flex items-center gap-1.5 rounded border border-[#2a2a2a] px-3 py-1 text-xs text-[#f5f5f5]/40">
                     <AndroidIcon />
