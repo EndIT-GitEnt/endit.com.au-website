@@ -172,14 +172,20 @@ function HomePage() {
           <source
             media="(max-width: 767px)"
             srcSet="/assets/brand/website_headers/endit_header_tablet_dark_1536x864.png"
+            width={1536}
+            height={864}
           />
           <source
             media="(min-width: 768px)"
             srcSet="/assets/brand/website_headers/endit_header_desktop_dark_1920x600.png"
+            width={1920}
+            height={600}
           />
           <img
             src="/assets/brand/website_headers/endit_header_desktop_dark_1920x600.png"
             alt="End iT"
+            width={1920}
+            height={600}
             className="w-full object-cover object-center"
             style={{ maxHeight: "420px" }}
           />

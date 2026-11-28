@@ -38,7 +38,7 @@ test "$(grep -Fo "href=\"$mrl_route\"" "$temp_dir/home.html" | wc -l)" -ge 2
 curl --fail --silent --show-error --max-time 5 "$origin/apps" -o "$temp_dir/apps.html"
 test "$(grep -Fo "href=\"$mrl_route\"" "$temp_dir/apps.html" | wc -l)" -ge 2
 curl --fail --silent --show-error --max-time 5 "$origin$mrl_route" -o "$temp_dir/mrl.html"
-grep -Fq 'Coming soon for Android and iOS.' "$temp_dir/mrl.html"
+grep -Fq 'Coming soon on Android and iOS' "$temp_dir/mrl.html"
 grep -Fq 'href="#privacy-overview"' "$temp_dir/mrl.html"
 grep -Fq 'id="privacy-overview"' "$temp_dir/mrl.html"
 test "$(grep -Fo "href=\"$mrl_support_route\"" "$temp_dir/mrl.html" | wc -l)" -ge 2

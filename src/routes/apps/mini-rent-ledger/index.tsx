@@ -140,7 +140,6 @@ function MiniRentLedgerPage() {
             <p className="mx-auto mt-5 max-w-xl text-xl leading-relaxed text-[#f5f5f5]/80">
               {miniRentLedger.description}
             </p>
-            <p className="mt-3 text-base text-[#f5f5f5]/65">Coming soon for Android and iOS.</p>
             <p className="mx-auto mt-8 max-w-xl rounded border border-[#fbbf24]/25 bg-[#fbbf24]/5 px-6 py-4 text-sm font-medium text-[#fbbf24]">
               Works offline, with rental information stored on your device.
             </p>
@@ -260,10 +259,7 @@ function MiniRentLedgerPage() {
             <ul aria-label="Planned stores" className="flex flex-wrap gap-4">
               {["Google Play", "App Store"].map((store) => (
                 <li key={store} className="rounded border border-[#2a2a2a] bg-[#111] px-6 py-4">
-                  <p className="text-xs font-medium uppercase tracking-wider text-[#f5f5f5]/65">
-                    Coming soon
-                  </p>
-                  <p className="mt-1 text-sm font-bold">{store}</p>
+                  <p className="text-sm font-bold">{store}</p>
                 </li>
               ))}
             </ul>
