@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 
+const APP_LINKS = [
+  { href: "/apps/pocket-key-manager/privacy", name: "Pocket Key Manager" },
+  { href: "/apps/mini-rent-ledger/privacy", name: "Mini Rent Ledger" },
+];
+
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
@@ -34,20 +39,26 @@ function PrivacyIndexPage() {
           </p>
         </div>
         <div className="space-y-4">
-          <a
-            href="/apps/pocket-key-manager/privacy"
-            className="group flex items-center justify-between rounded border border-[#1e1e1e] bg-[#111] p-5 transition-colors hover:border-[#fbbf24]/40"
-          >
-            <div>
-              <p className="font-semibold text-[#f5f5f5] group-hover:text-[#fbbf24] transition-colors">
-                Pocket Key Manager
-              </p>
-              <p className="mt-1 text-sm text-[#f5f5f5]/50">Privacy Policy</p>
-            </div>
-            <span className="text-[#fbbf24]/50 group-hover:text-[#fbbf24] transition-colors text-lg">
-              →
-            </span>
-          </a>
+          {APP_LINKS.map(({ href, name }) => (
+            <a
+              key={href}
+              href={href}
+              className="group flex items-center justify-between rounded border border-[#1e1e1e] bg-[#111] p-5 transition-colors hover:border-[#fbbf24]/40"
+            >
+              <div>
+                <p className="font-semibold text-[#f5f5f5] transition-colors group-hover:text-[#fbbf24]">
+                  {name}
+                </p>
+                <p className="mt-1 text-sm text-[#f5f5f5]/55">Privacy Policy</p>
+              </div>
+              <span
+                aria-hidden="true"
+                className="text-lg text-[#fbbf24]/50 transition-colors group-hover:text-[#fbbf24]"
+              >
+                →
+              </span>
+            </a>
+          ))}
         </div>
       </main>
       <SiteFooter />

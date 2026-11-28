@@ -9,6 +9,12 @@ The product page, the Support directory and the footer link to
 `/apps/mini-rent-ledger/support`. The dedicated support page uses the published
 End iT support email and provides instructions for sharing a support request.
 
+The app information panel and footer link to the Privacy Policy at
+`/apps/mini-rent-ledger/privacy` and the Terms of Use at
+`/apps/mini-rent-ledger/terms`. The site-wide Privacy and Terms directories
+also list these pages. Update the published copy and its last-updated date
+together when an approved revision is published.
+
 The runtime artwork is copied from `MRL-Brand-Asset-Pack-v1.zip` into
 `public/assets/app/mini_rent_ledger/web/`.
 

@@ -51,6 +51,23 @@ curl --fail --silent --show-error --max-time 5 "$origin$mrl_support_route" -o "$
 grep -Eq '<title>[^<]*Mini Rent Ledger[^<]*</title>' "$temp_dir/mrl-support.html"
 grep -Fq 'href="mailto:support@endit.com.au"' "$temp_dir/mrl-support.html"
 
+for document in privacy terms; do
+    legal_path="$mrl_route/$document"
+    curl --fail --silent --show-error --max-time 5 "$origin/$document" -o "$temp_dir/legal-index.html"
+    test "$(grep -Fo "href=\"$legal_path\"" "$temp_dir/legal-index.html" | wc -l)" -ge 2
+    test "$(grep -Fo "href=\"$legal_path\"" "$temp_dir/mrl.html" | wc -l)" -ge 2
+    curl --fail --silent --show-error --max-time 5 "$origin$legal_path" -o "$temp_dir/mrl-$document.html"
+    grep -Fq "rel=\"canonical\" href=\"https://endit.com.au$legal_path\"" "$temp_dir/mrl-$document.html"
+    grep -Eq '<title>[^<]*Mini Rent Ledger[^<]*</title>' "$temp_dir/mrl-$document.html"
+    grep -Fq 'href="mailto:support@endit.com.au"' "$temp_dir/mrl-$document.html"
+    if grep -Eiq 'draft for owner review|owner review before publication' "$temp_dir/mrl-$document.html"; then
+        printf 'Owner review notes found on %s\n' "$legal_path" >&2
+        exit 1
+    fi
+done
+
+test "$(grep -Fo "href=\"$mrl_route/privacy\"" "$temp_dir/mrl-terms.html" | wc -l)" -ge 2
+
 for asset in mrl-icon-192.png mrl-wordmark-on-dark.svg mrl-social-share-1200x630.jpg; do
     curl --fail --silent --show-error --max-time 5 "$origin$mrl_assets/$asset" -o "$temp_dir/asset"
     test -s "$temp_dir/asset"
@@ -66,4 +83,4 @@ for extension in css js; do
     test -s "$temp_dir/asset"
 done
 
-printf 'Worker served eleven pages, a 404, built CSS and JavaScript, and MRL branding assets.\n'
+printf 'Worker served thirteen pages, a 404, built CSS and JavaScript, and MRL branding assets.\n'
