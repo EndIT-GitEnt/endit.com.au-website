@@ -10,6 +10,11 @@ const PKM_LINKS = [
   { href: "/apps/pocket-key-manager/support", label: "Support" },
 ];
 
+const MRL_LINKS = [
+  { href: "/apps/mini-rent-ledger", label: "Mini Rent Ledger" },
+  { href: "/apps/mini-rent-ledger/support", label: "Support" },
+];
+
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
@@ -25,7 +30,7 @@ export function SiteFooter() {
               PO Box 1188, South Perth WA 6151, Australia
             </p>
           </div>
-          <div className="flex flex-col gap-6 sm:flex-row sm:gap-10">
+          <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:gap-x-8 lg:gap-x-10">
             <nav aria-label="Footer navigation">
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#f5f5f5]/30">
                 Links
@@ -53,6 +58,23 @@ export function SiteFooter() {
                     <a
                       href={href}
                       className="text-sm text-[#f5f5f5]/40 transition-colors hover:text-[#fbbf24]"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Mini Rent Ledger links">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#f5f5f5]/55">
+                Mini Rent Ledger
+              </p>
+              <ul className="space-y-1.5">
+                {MRL_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      className="text-sm text-[#f5f5f5]/55 transition-colors hover:text-[#fbbf24]"
                     >
                       {label}
                     </a>
