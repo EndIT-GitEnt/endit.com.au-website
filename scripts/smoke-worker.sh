@@ -50,6 +50,13 @@ test "$(grep -Fo "href=\"$mrl_support_route\"" "$temp_dir/support.html" | wc -l)
 curl --fail --silent --show-error --max-time 5 "$origin$mrl_support_route" -o "$temp_dir/mrl-support.html"
 grep -Eq '<title>[^<]*Mini Rent Ledger[^<]*</title>' "$temp_dir/mrl-support.html"
 grep -Fq 'href="mailto:support@endit.com.au"' "$temp_dir/mrl-support.html"
+grep -Fq 'How to Get Support</h2>' "$temp_dir/mrl-support.html"
+grep -Fq 'What to Include in Your Support Request</h2>' "$temp_dir/mrl-support.html"
+grep -Fq 'Privacy Note — Backup Files and Sensitive Data</h2>' "$temp_dir/mrl-support.html"
+grep -Fq 'Data Recovery</h2>' "$temp_dir/mrl-support.html"
+grep -Fq 'Copy diagnostics</strong>' "$temp_dir/mrl-support.html"
+grep -Fq 'Restore backup</strong>' "$temp_dir/mrl-support.html"
+test "$(grep -Fo "href=\"$mrl_route/privacy\"" "$temp_dir/mrl-support.html" | wc -l)" -ge 2
 
 for document in privacy terms; do
     legal_path="$mrl_route/$document"
