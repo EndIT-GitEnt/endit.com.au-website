@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AppCard } from "../components/AppCard";
+import { miniRentLedger } from "../lib/mini-rent-ledger";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -332,6 +334,9 @@ function HomePage() {
                 ))}
               </div>
             </div>
+          </div>
+          <div className="mt-6 max-w-md">
+            <AppCard {...miniRentLedger} headingLevel="h3" />
           </div>
         </div>
       </section>
