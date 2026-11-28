@@ -1,8 +1,13 @@
 # Mini Rent Ledger website branding
 
-The homepage and Apps directory link to `/apps/mini-rent-ledger`. The product
-page describes the offline app and shows its pre-release status for Android
-and iOS.
+The homepage featured cards and Apps directory link to `/apps/mini-rent-ledger`.
+The product page follows the Pocket Key Manager page structure for audience,
+features, workflow, privacy overview, availability and app information.
+Availability is shown as Coming soon for Android and iOS.
+
+The product page, the Support directory and the footer link to
+`/apps/mini-rent-ledger/support`. The dedicated support page uses the published
+End iT support email and provides instructions for sharing a support request.
 
 The runtime artwork is copied from `MRL-Brand-Asset-Pack-v1.zip` into
 `public/assets/app/mini_rent_ledger/web/`.
@@ -17,6 +22,6 @@ The product hero uses HTML for the description and availability. Its SVG
 wordmark provides the accessible name of the page heading. The sharing JPEG
 has a 1200 × 630 canvas and an absolute URL in the page metadata.
 
-When updating the artwork, verify the affected card, product page and sharing
+When updating the artwork, verify the affected card, product and support navigation, and sharing
 metadata with the built Worker. The site-wide identity and favicon belong to
 End iT.

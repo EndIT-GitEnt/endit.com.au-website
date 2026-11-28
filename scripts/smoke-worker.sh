@@ -31,15 +31,25 @@ for route in \
 done
 
 mrl_route=/apps/mini-rent-ledger
+mrl_support_route=$mrl_route/support
 mrl_assets=/assets/app/mini_rent_ledger/web
 sharing_image=https://endit.com.au$mrl_assets/mrl-social-share-1200x630.jpg
-grep -Fq "href=\"$mrl_route\"" "$temp_dir/home.html"
+test "$(grep -Fo "href=\"$mrl_route\"" "$temp_dir/home.html" | wc -l)" -ge 2
 curl --fail --silent --show-error --max-time 5 "$origin/apps" -o "$temp_dir/apps.html"
-grep -Fq "href=\"$mrl_route\"" "$temp_dir/apps.html"
+test "$(grep -Fo "href=\"$mrl_route\"" "$temp_dir/apps.html" | wc -l)" -ge 2
 curl --fail --silent --show-error --max-time 5 "$origin$mrl_route" -o "$temp_dir/mrl.html"
-grep -Fq 'Coming soon for Android and iOS.' "$temp_dir/mrl.html"
+grep -Fq 'Coming soon on Android and iOS' "$temp_dir/mrl.html"
+grep -Fq 'href="#privacy-overview"' "$temp_dir/mrl.html"
+grep -Fq 'id="privacy-overview"' "$temp_dir/mrl.html"
+test "$(grep -Fo "href=\"$mrl_support_route\"" "$temp_dir/mrl.html" | wc -l)" -ge 2
 grep -Fq "property=\"og:image\" content=\"$sharing_image\"" "$temp_dir/mrl.html"
 grep -Fq "name=\"twitter:image\" content=\"$sharing_image\"" "$temp_dir/mrl.html"
+
+curl --fail --silent --show-error --max-time 5 "$origin/support" -o "$temp_dir/support.html"
+test "$(grep -Fo "href=\"$mrl_support_route\"" "$temp_dir/support.html" | wc -l)" -ge 2
+curl --fail --silent --show-error --max-time 5 "$origin$mrl_support_route" -o "$temp_dir/mrl-support.html"
+grep -Eq '<title>[^<]*Mini Rent Ledger[^<]*</title>' "$temp_dir/mrl-support.html"
+grep -Fq 'href="mailto:support@endit.com.au"' "$temp_dir/mrl-support.html"
 
 for asset in mrl-icon-192.png mrl-wordmark-on-dark.svg mrl-social-share-1200x630.jpg; do
     curl --fail --silent --show-error --max-time 5 "$origin$mrl_assets/$asset" -o "$temp_dir/asset"
@@ -56,4 +66,4 @@ for extension in css js; do
     test -s "$temp_dir/asset"
 done
 
-printf 'Worker served ten pages, a 404, built CSS and JavaScript, and MRL branding assets.\n'
+printf 'Worker served eleven pages, a 404, built CSS and JavaScript, and MRL branding assets.\n'

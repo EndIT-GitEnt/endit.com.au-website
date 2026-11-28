@@ -15,6 +15,7 @@ import { Route as SupportRouteImport } from './routes/support'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as AppsIndexRouteImport } from './routes/apps/index'
 import { Route as AppsMiniRentLedgerIndexRouteImport } from './routes/apps/mini-rent-ledger/index'
+import { Route as AppsMiniRentLedgerSupportRouteImport } from './routes/apps/mini-rent-ledger/support'
 import { Route as AppsPocketKeyManagerIndexRouteImport } from './routes/apps/pocket-key-manager/index'
 import { Route as AppsPocketKeyManagerPrivacyRouteImport } from './routes/apps/pocket-key-manager/privacy'
 import { Route as AppsPocketKeyManagerSupportRouteImport } from './routes/apps/pocket-key-manager/support'
@@ -50,6 +51,12 @@ const AppsMiniRentLedgerIndexRoute = AppsMiniRentLedgerIndexRouteImport.update({
   path: '/apps/mini-rent-ledger/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppsMiniRentLedgerSupportRoute =
+  AppsMiniRentLedgerSupportRouteImport.update({
+    id: '/apps/mini-rent-ledger/support',
+    path: '/apps/mini-rent-ledger/support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AppsPocketKeyManagerIndexRoute =
   AppsPocketKeyManagerIndexRouteImport.update({
     id: '/apps/pocket-key-manager/',
@@ -81,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
   '/apps/': typeof AppsIndexRoute
+  '/apps/mini-rent-ledger/support': typeof AppsMiniRentLedgerSupportRoute
   '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
   '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
   '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
@@ -93,6 +101,7 @@ export interface FileRoutesByTo {
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
   '/apps': typeof AppsIndexRoute
+  '/apps/mini-rent-ledger/support': typeof AppsMiniRentLedgerSupportRoute
   '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
   '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
   '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
@@ -106,6 +115,7 @@ export interface FileRoutesById {
   '/support': typeof SupportRoute
   '/terms': typeof TermsRoute
   '/apps/': typeof AppsIndexRoute
+  '/apps/mini-rent-ledger/support': typeof AppsMiniRentLedgerSupportRoute
   '/apps/pocket-key-manager/privacy': typeof AppsPocketKeyManagerPrivacyRoute
   '/apps/pocket-key-manager/support': typeof AppsPocketKeyManagerSupportRoute
   '/apps/pocket-key-manager/terms': typeof AppsPocketKeyManagerTermsRoute
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/support'
     | '/terms'
     | '/apps/'
+    | '/apps/mini-rent-ledger/support'
     | '/apps/pocket-key-manager/privacy'
     | '/apps/pocket-key-manager/support'
     | '/apps/pocket-key-manager/terms'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/support'
     | '/terms'
     | '/apps'
+    | '/apps/mini-rent-ledger/support'
     | '/apps/pocket-key-manager/privacy'
     | '/apps/pocket-key-manager/support'
     | '/apps/pocket-key-manager/terms'
@@ -144,6 +156,7 @@ export interface FileRouteTypes {
     | '/support'
     | '/terms'
     | '/apps/'
+    | '/apps/mini-rent-ledger/support'
     | '/apps/pocket-key-manager/privacy'
     | '/apps/pocket-key-manager/support'
     | '/apps/pocket-key-manager/terms'
@@ -157,6 +170,7 @@ export interface RootRouteChildren {
   SupportRoute: typeof SupportRoute
   TermsRoute: typeof TermsRoute
   AppsIndexRoute: typeof AppsIndexRoute
+  AppsMiniRentLedgerSupportRoute: typeof AppsMiniRentLedgerSupportRoute
   AppsPocketKeyManagerPrivacyRoute: typeof AppsPocketKeyManagerPrivacyRoute
   AppsPocketKeyManagerSupportRoute: typeof AppsPocketKeyManagerSupportRoute
   AppsPocketKeyManagerTermsRoute: typeof AppsPocketKeyManagerTermsRoute
@@ -208,6 +222,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppsMiniRentLedgerIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/apps/mini-rent-ledger/support': {
+      id: '/apps/mini-rent-ledger/support'
+      path: '/apps/mini-rent-ledger/support'
+      fullPath: '/apps/mini-rent-ledger/support'
+      preLoaderRoute: typeof AppsMiniRentLedgerSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/apps/pocket-key-manager/': {
       id: '/apps/pocket-key-manager/'
       path: '/apps/pocket-key-manager'
@@ -245,6 +266,7 @@ const rootRouteChildren: RootRouteChildren = {
   SupportRoute: SupportRoute,
   TermsRoute: TermsRoute,
   AppsIndexRoute: AppsIndexRoute,
+  AppsMiniRentLedgerSupportRoute: AppsMiniRentLedgerSupportRoute,
   AppsPocketKeyManagerPrivacyRoute: AppsPocketKeyManagerPrivacyRoute,
   AppsPocketKeyManagerSupportRoute: AppsPocketKeyManagerSupportRoute,
   AppsPocketKeyManagerTermsRoute: AppsPocketKeyManagerTermsRoute,

@@ -4,17 +4,9 @@ type AppCardProps = {
   icon: string;
   iconAlt?: string;
   description: string;
-  headingLevel?: "h2" | "h3";
 };
 
-export function AppCard({
-  href,
-  name,
-  icon,
-  iconAlt = "",
-  description,
-  headingLevel: Heading = "h2",
-}: AppCardProps) {
+export function AppCard({ href, name, icon, iconAlt = "", description }: AppCardProps) {
   return (
     <a
       href={href}
@@ -34,9 +26,9 @@ export function AppCard({
             Coming soon
           </span>
         </div>
-        <Heading className="mb-2 text-base font-bold text-[#f5f5f5] transition-colors group-hover:text-[#fbbf24]">
+        <h2 className="mb-2 text-base font-bold text-[#f5f5f5] transition-colors group-hover:text-[#fbbf24]">
           {name}
-        </Heading>
+        </h2>
         <p className="mb-4 text-sm leading-relaxed text-[#f5f5f5]/55">{description}</p>
         <div className="mb-5 flex flex-wrap gap-1.5">
           {["Android", "iOS"].map((platform) => (
