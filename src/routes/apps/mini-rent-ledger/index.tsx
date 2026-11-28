@@ -233,6 +233,12 @@ function MiniRentLedgerPage() {
                 Mini Rent Ledger stores rental information locally. End iT does not collect or
                 access your ledger. You choose where to save any backup files you create.
               </p>
+              <Link
+                to="/apps/mini-rent-ledger/privacy"
+                className="mt-4 inline-block text-sm font-semibold text-[#fbbf24] underline underline-offset-4 hover:text-[#f59e0b]"
+              >
+                Read the Privacy Policy <span aria-hidden="true">→</span>
+              </Link>
             </div>
             <ul className="space-y-3 rounded border border-[#1e1e1e] bg-[#111] p-6">
               {privacyPoints.map((point) => (
@@ -275,6 +281,12 @@ function MiniRentLedgerPage() {
               <a href="#privacy-overview" className={infoLinkClass}>
                 Privacy overview <span aria-hidden="true">→</span>
               </a>
+              <Link to="/apps/mini-rent-ledger/privacy" className={infoLinkClass}>
+                Privacy Policy <span aria-hidden="true">→</span>
+              </Link>
+              <Link to="/apps/mini-rent-ledger/terms" className={infoLinkClass}>
+                Terms of Use <span aria-hidden="true">→</span>
+              </Link>
               <Link to="/apps/mini-rent-ledger/support" className={infoLinkClass}>
                 Support <span aria-hidden="true">→</span>
               </Link>

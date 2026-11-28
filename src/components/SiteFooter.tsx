@@ -12,6 +12,8 @@ const PKM_LINKS = [
 
 const MRL_LINKS = [
   { href: "/apps/mini-rent-ledger", label: "Mini Rent Ledger" },
+  { href: "/apps/mini-rent-ledger/privacy", label: "Privacy Policy" },
+  { href: "/apps/mini-rent-ledger/terms", label: "Terms of Use" },
   { href: "/apps/mini-rent-ledger/support", label: "Support" },
 ];
 
